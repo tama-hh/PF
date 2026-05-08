@@ -1,0 +1,558 @@
+/* ===== DAY4ページ全体 ===== */
+.day4-scrap {
+    min-height: 100vh;
+    background: #c2e59d;
+    color: #3f352c;
+    padding: 42px 56px 120px;
+    box-sizing: border-box;
+    letter-spacing: 0.08em;
+    }
+    
+    .day4-scrap img {
+    box-sizing: border-box;
+    }
+    
+    /* ===== 上部3カラム ===== */
+    .day4-header {
+    max-width: 1180px;
+    margin: 0 auto 34px;
+    display: grid;
+    grid-template-columns: 260px 1fr 285px;
+    gap: 34px;
+    align-items: start;
+    }
+    
+    /* ===== 左カラム ===== */
+    .header-left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    }
+    
+    .title-art {
+    width: 250px;
+    display: block;
+    }
+    
+    .top-link {
+    position: relative;
+    z-index: 100;
+    pointer-events: auto;
+    top: -48px;
+    color: #324b8f;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 1px solid #324b8f;
+    width: fit-content;
+    }
+    
+    /* ===== 地図 ===== */
+    .header-left .map-wrapper {
+    position: relative;
+    width: 400px;
+    margin-top: -70px;
+    }
+    
+    .header-left .okinawa-map {
+    width: 100%;
+    display: block;
+    opacity: 0.95;
+    }
+    
+    .header-left .marker-group {
+    position: absolute;
+    transform: translate(-160%, -50%);
+    opacity: 0.45;
+    transition: 0.25s ease;
+    }
+    
+    .header-left .map-marker {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    display: block;
+    background: #328f46;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.65);
+    }
+    
+    /* DAY4地図ポイント位置 */
+    .m-0900 { top: 50%; left: 44%; }
+    .m-1200 { top: 88%; left: 36%; }
+    .m-1730 { top: 80%; left: 28%; }
+    
+    .marker-group.is-active {
+    opacity: 1;
+    transform: translate(-160%, -50%) scale(1.6);
+    }
+    
+    .marker-group.is-active .map-marker {
+    animation: pulseMarker 1.8s infinite;
+    box-shadow:
+    0 0 0 6px rgba(255, 255, 255, 0.85),
+    0 0 18px rgba(50, 143, 67, 0.95);
+    }
+    
+    @keyframes pulseMarker {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.25); }
+    100% { transform: scale(1); }
+    }
+    
+    /* ===== 中央カラム ===== */
+    .header-main {
+    position: relative;
+    min-height: 320px;
+    }
+    
+    .intro-area {
+    position: relative;
+    height: 130px;
+    }
+    
+    .intro-shisa {
+    position: absolute;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.35s ease, filter 0.35s ease;
+    }
+    
+    .intro-shisa.female {
+    left: -50px;
+    top: 4px;
+    width: 105px;
+    transform: rotate(-8deg);
+    }
+    
+    .intro-shisa.male {
+    left: 600px;
+    top: 500px;
+    width: 105px;
+    transform: rotate(8deg);
+    }
+    
+    .intro-shisa:hover {
+    transform: translateY(-6px) rotate(-6deg) scale(1.08);
+    filter: drop-shadow(0 10px 14px rgba(0,0,0,0.16));
+    }
+    
+    .speech-bubble {
+    position: absolute;
+    left: 80px;
+    top: 10px;
+    width: 440px;
+    padding: 24px 34px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.8;
+    font-weight: 700;
+    color: #5a4b3b;
+    background: rgba(255, 255, 255, 0.52);
+    border: 4px solid rgba(255, 255, 255, 0.85);
+    border-radius: 50%;
+    }
+    
+    .day4-schedule {
+    margin-left: 200px;
+    margin-top: 52px;
+    }
+    
+    .day4-schedule a {
+    display: block;
+    position: relative;
+    margin: 0 0 12px;
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 700;
+    color: #3f352c;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.25s ease;
+    }
+    
+    .day4-schedule a:hover {
+    transform: translateX(6px);
+    color: #136c1f;
+    }
+    
+    .day4-schedule a::after {
+    content: "";
+    position: absolute;
+    left: -12px;
+    top: 50%;
+    width: 0;
+    height: 2px;
+    background: #136c1f;
+    transition: 0.3s ease;
+    }
+    
+    .day4-schedule a:hover::after {
+    width: 8px;
+    }
+    
+    /* ===== 今日のコーデ ===== */
+    .day4-scrap .outfit-card {
+    position: relative;
+    background: #f2c987;
+    width: 285px;
+    height: 420px;
+    min-height: 420px;
+    padding: 18px 18px 22px;
+    overflow: visible;
+    transform: rotate(-1.5deg);
+    box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.12),
+    0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    }
+    
+    .day4-scrap .outfit-card:hover {
+    transform: translateY(-8px) rotate(-2deg);
+    box-shadow:
+    0 28px 55px rgba(0, 0, 0, 0.18),
+    0 10px 22px rgba(0, 0, 0, 0.12);
+    }
+    
+    .day4-scrap .outfit-card h2 {
+    margin: 0 0 12px;
+    text-align: center;
+    color: #6a4c35;
+    font-size: 17px;
+    border-bottom: 2px solid #bb735b;
+    padding-bottom: 7px;
+    position: relative;
+    z-index: 2;
+    }
+    
+    .day4-scrap .outfit-card .outfit-girl {
+    position: absolute;
+    right: -115px;
+    top: 50px;
+    width: 420px;
+    height: auto;
+    max-width: none;
+    z-index: 3;
+    }
+    
+    .day4-scrap .outfit-card p {
+    position: absolute;
+    left: 18px;
+    right: 18px;
+    bottom: 22px;
+    z-index: 4;
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.75;
+    font-weight: 700;
+    color: #6a4c35;
+    background: rgba(255, 255, 255, 0.76);
+    padding: 8px 10px;
+    border-radius: 14px;
+    }
+    
+    /* ===== タイムライン ===== */
+    .day4-timeline {
+    max-width: 1180px;
+    margin: 34px auto 0;
+    position: relative;
+    }
+    
+    .day4-timeline::before {
+    content: "";
+    position: absolute;
+    left: 16px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #32458f;
+    }
+    
+    .memory-block {
+    position: relative;
+    display: grid;
+    grid-template-columns: 82px 1fr;
+    gap: 28px;
+    margin-bottom: 54px;
+    z-index: 1;
+    }
+    
+    .memory-block::before {
+    content: "";
+    position: absolute;
+    left: 6.5px;
+    top: 0;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    background: #32458f;
+    z-index: 2;
+    }
+    
+    .memory-block::after {
+    content: "";
+    position: absolute;
+    left: 82px;
+    right: 0;
+    top: 12px;
+    height: 2px;
+    background: #aa8f73;
+    z-index: -1;
+    }
+    
+    .memory-block > .time {
+    position: relative;
+    z-index: 10;
+    margin-left: 36px;
+    width: fit-content;
+    height: fit-content;
+    background: #32458f;
+    color: #fff;
+    padding: 6px 12px;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.2;
+    border-radius: 2px;
+    }
+    
+    .memory-main {
+    position: relative;
+    padding-top: 12px;
+    z-index: 1;
+    }
+    
+    .memory-main h2 {
+    margin: 0 0 14px 20px;
+    font-size: 23px;
+    color: #3f352c;
+    letter-spacing: 0.08em;
+    }
+    
+    .memory-main h3 {
+    margin: 28px 0 12px 20px;
+    font-size: 18px;
+    color: #6a4c35;
+    letter-spacing: 0.08em;
+    }
+    
+    .memory-main p {
+    margin: 14px 0 0;
+    font-size: 15px;
+    line-height: 2;
+    font-weight: 700;
+    }
+    
+    /* ===== 写真hover ===== */
+    .day4-scrap .photos img,
+    .shisa-card img{
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    filter 0.35s ease;
+    }
+    
+    .day4-scrap .photos img:hover,
+    .shisa-card img:hover {
+    transform: scale(1.08);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.22);
+    filter: brightness(1.06) saturate(1.06);
+    z-index: 30;
+    }
+    
+    /* ===== 09:00 アリビラ ===== */
+    .alivila-memory {
+    padding-right: 260px;
+    min-height: 280px;
+    }
+    
+    .swimset-deco {
+    position: absolute;
+    right: 24px;
+    top: 70px;
+    width: 220px;
+    height: auto;
+    transition: transform 0.35s ease, filter 0.35s ease;
+    }
+    
+    .swimset-deco:hover {
+    transform: rotate(6deg) scale(1.06);
+    filter: drop-shadow(0 10px 14px rgba(0,0,0,0.16));
+    }
+    
+    /* ===== 12:00 おきなわワールド ===== */
+    .world-memory {
+    padding-right: 0;
+    }
+    
+    .world-section {
+    position: relative;
+    margin-bottom: 38px;
+    }
+    
+    .world-section:last-child {
+    margin-bottom: 0;
+    }
+    
+    .gyokusendo-area {
+    padding: 18px 20px 22px;
+    background: rgb(162, 209, 120);
+    border-radius: 12px;
+    }
+    
+    .fruit-area {
+    padding-right: 260px;
+    }
+    
+    .shisa-area {
+    padding-right: 320px;
+    }
+    
+    .animals-area {
+    padding-right: 310px;
+    }
+    
+    .animals-photos {
+    margin-top: 14px;
+    }
+    
+    /* ===== シーサーカード ===== */
+    .shisa-card {
+    position: absolute;
+    right: -20px;
+    top: 40px;
+    width: 280px;
+    min-height: 220px;
+    z-index: 100;
+    }
+    
+    .shisa-card img {
+    position: absolute;
+    width: 120px;
+    height: auto;
+    object-fit: contain;
+    }
+    
+    .shisa-card img:first-child {
+    left: 0;
+    top: 20px;
+    transform: rotate(-8deg);
+    }
+    
+    .shisa-card img:nth-child(2) {
+    right: 0;
+    top: 0;
+    transform: rotate(8deg);
+    }
+    
+    .shisa-card p {
+    position: absolute;
+    left: 48px;
+    top: 130px;
+    width: 150px;
+    margin: 0;
+    padding: 18px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 1.8;
+    font-weight: 700;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+    }
+    
+    /* ===== 生き物カード ===== */
+    .animal-card {
+    position: absolute;
+    left: 500px;
+    top: 555px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 100;
+    }
+    
+    .animal-links {
+    width: 150px;
+    padding: 18px;
+    background: #fff;
+    border-radius: 999px;
+    font-size: 12px;
+    line-height: 1.8;
+    font-weight: 700;
+    text-align: center;
+    color: #5a4032;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+    }
+    
+    .animal-links a {
+    color: #5a4032;
+    text-decoration: none;
+    border-bottom: 1px dashed #8f4a32;
+    transition: 0.25s ease;
+    }
+    
+    .animal-links a:hover {
+    color: #8f4a32;
+    }
+    
+    .animal-card .snake-deco {
+        width: 400px;
+        height: auto;
+        object-fit: contain;
+        cursor: default;
+        transition: transform 0.35s ease, filter 0.35s ease;
+    }
+    
+    .animal-card .snake-deco:hover {
+        transform: rotate(6deg) scale(1.06);
+        filter: drop-shadow(0 10px 14px rgba(0,0,0,0.16));
+    }
+    
+    /* card持ちブロックを前面 */
+    .memory-block.has-world-card {
+    z-index: 80;
+    }
+    
+    .has-world-card .shisa-card,
+    .has-world-card .animal-card {
+    z-index: 999;
+    }
+    
+    /* ===== 17:30 旅の終わり ===== */
+    .finish-memory {
+    padding-right: 240px;
+    min-height: 300px;
+    }
+    
+    .sanpincha-deco {
+    position: absolute;
+    right: 10px;
+    top: 92px;
+    width: 90px;
+    height: auto;
+    transition: transform 0.35s ease, filter 0.35s ease;
+    }
+    
+    .sanpincha-deco:hover {
+    transform: rotate(-5deg) scale(1.06);
+    filter: drop-shadow(0 10px 14px rgba(0,0,0,0.16));
+    }
+    
+    /* ===== 右下 ===== */
+    .day4-end {
+    position: relative;
+    height: 280px;
+    }
+    
+    .back-top-link {
+    position: absolute;
+    right: 150px;
+    bottom: 18px;
+    color: #6a4c35;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    }

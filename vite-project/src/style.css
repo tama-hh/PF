@@ -1,0 +1,623 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Zen Maru Gothic', sans-serif;
+  background: #ffffff;
+  color: #222;
+}
+
+/* ---------------- HOMEページ ---------------- */
+.hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: cover;
+  object-position: center 30%;
+  transform: translate(-50%, -50%);
+  will-change: transform;
+}
+
+.hero-dark {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.28);
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+  padding: 24px;
+}
+
+.sub-copy {
+  margin: 0 0 14px;
+  font-size: 0.95rem;
+  letter-spacing: 0.35em;
+}
+
+.overlay h1 {
+  margin: 0;
+  font-size: clamp(2.5rem, 7vw, 5.8rem);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-shadow: 0 4px 18px rgba(0, 0, 0, 0.35);
+}
+
+.main-copy {
+  margin: 20px 0 0;
+  font-size: clamp(1rem, 2vw, 1.35rem);
+  letter-spacing: 0.08em;
+  text-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+}
+
+.move-text {
+  position: absolute;
+  bottom: 34px;
+  left: 24px;
+  font-size: 0.9rem;
+  letter-spacing: 0.2em;
+  background: rgba(255, 255, 255, 0.45);
+  color: #222;
+  padding: 8px 14px;
+  border-radius: 10px;
+  backdrop-filter: blur(4px);
+  text-decoration: none;
+  z-index: 3;
+  transition: 0.3s;
+}
+
+.move-text:hover {
+  background: rgba(255, 255, 255, 0.65);
+  transform: translateY(-2px);
+}
+
+.content {
+  background: #fff;
+  padding: 100px 24px 40px;
+}
+
+.content-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.content h2 {
+  margin-top: 0;
+  font-size: 2rem;
+}
+
+.trip-summary {
+  max-width: 1450px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: minmax(250px, 1fr) 480px minmax(250px, 1fr);
+  gap: 30px;
+  align-items: center;
+  padding: 20px 40px 100px;
+}
+
+.trip-column {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.day-card {
+  border-radius: 20px;
+  padding: 24px 28px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.day1 {
+  background: rgba(218, 237, 250, 0.9);
+}
+
+.day2 {
+  background: rgba(255, 252, 202, 0.9);
+}
+
+.day3 {
+  background: rgba(242, 212, 221, 0.9);
+}
+
+.day4 {
+  background: rgba(202, 239, 193, 0.9);
+}
+
+.day-card h3 {
+  margin: 0 0 16px;
+  font-size: 1.5rem;
+  color: #0f5f7a;
+}
+
+.day-card ul {
+  margin: 0;
+  padding-left: 1.2em;
+}
+
+.day-card li {
+  margin-bottom: 10px;
+  line-height: 1.8;
+}
+
+.memory-button {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.65);
+  color: #0f5f7a;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.memory-button:hover {
+  background: rgba(255, 255, 255, 0.95);
+  transform: translateY(-2px);
+}
+
+/* 地図 */
+.trip-map-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.map-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+}
+
+.okinawa-map {
+  width: 100%;
+  display: block;
+  opacity: 0.95;
+  filter:
+    drop-shadow(0 4px 6px rgba(0, 0, 0, 0.16))
+    drop-shadow(0 8px 12px rgba(0, 0, 0, 0.10));
+}
+
+.marker-group {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.marker-group.is-visible {
+  opacity: 1;
+}
+
+.map-marker {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: block;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.55);
+}
+
+.day1-marker .map-marker {
+  background: #4da3df;
+}
+
+.day2-marker .map-marker {
+  background: #f9ef58;
+}
+
+.day3-marker .map-marker {
+  background: #d97998;
+}
+
+.day4-marker .map-marker {
+  background: #71e62d;
+}
+
+.marker-label {
+  margin-top: 4px;
+  font-size: 11px;
+  white-space: nowrap;
+  background: rgba(255, 255, 255, 0.92);
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+
+/* 持っていってよかった物 */
+.good-items {
+  padding: 120px 8%;
+  background: #f7f3ed;
+  text-align: center;
+}
+
+.good-items h2 {
+  font-size: 2.2rem;
+  color: #355c7d;
+  margin: 0 0 12px;
+}
+
+.items-sub {
+  color: #6b7c8f;
+  margin: 0 0 60px;
+}
+
+.items-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+}
+
+.item-card {
+  background: rgba(255, 255, 255, 0.72);
+  border-radius: 24px;
+  padding: 32px 28px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 360px;
+  position: relative;
+  overflow: hidden;
+}
+
+.item-card:hover {
+  transform: translateY(-8px);
+}
+
+.item-card::before {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 200px;
+  background: url("/item-back.png") center / contain no-repeat;
+  opacity: 0.55;
+  z-index: 1;
+}
+
+.item-card img {
+  width: 180px;
+  height: 200px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 20px;
+  position: relative;
+  z-index: 2;
+}
+
+.item-card h3 {
+  font-size: 1.15rem;
+  line-height: 1.45;
+  margin: 0 0 12px;
+  color: #355c7d;
+  min-height: 52px;
+}
+
+.item-card p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: #666;
+  text-align: left;
+}
+
+/* 旅のコーディネイト */
+.outfit-section {
+  padding: 120px 8%;
+  background: #fffaf6;
+  text-align: center;
+}
+
+.outfit-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.outfit-section h2 {
+  font-size: 2.2rem;
+  color: #355c7d;
+  margin: 0 0 12px;
+}
+
+.outfit-sub {
+  color: #6b7c8f;
+  margin: 0 0 60px;
+}
+
+.outfit-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+.outfit-card {
+  background: rgba(255, 255, 255, 0.78);
+  border-radius: 26px;
+  padding: 28px 22px 32px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+  position: relative;
+  overflow: hidden;
+  transition: 0.35s;
+}
+
+.outfit-card:hover {
+  transform: translateY(-8px);
+}
+
+.outfit-card::before {
+  content: "";
+  position: absolute;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 170px;
+  height: 48px;
+  background: rgba(248, 208, 128, 0.28);
+  border-radius: 48% 52% 45% 55% / 55% 42% 58% 45%;
+  z-index: 1;
+}
+
+.outfit-day {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  margin: 0 0 20px;
+  color: #355c7d;
+  font-weight: bold;
+  font-size: 1.1rem;
+  letter-spacing: 0.12em;
+}
+
+.outfit-card img {
+  height: 520px;
+  width: auto;
+  max-width: none;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto 24px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.outfit-text {
+  margin: 0;
+  color: #666;
+  line-height: 1.9;
+  font-size: 0.95rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== fade-in ===== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+    
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== 写真共通 ===== */
+.photos {
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+}
+    
+.photo-landscape {
+  width: 260px;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+}
+    
+.photo-portrait {
+  width: 190px;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ===== モーダル ===== */
+.photo-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.82);
+  backdrop-filter: blur(8px);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.35s ease;
+}
+  
+.photo-modal.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+  
+#modalImage {
+  max-width: 88vw;
+  max-height: 88vh;
+  border-radius: 12px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.45);
+  transform: scale(0.82);
+  transition: transform 0.35s ease;
+}
+  
+.photo-modal.is-open #modalImage {
+  transform: scale(1);
+}
+
+
+
+/* ===== Movie Collection ===== */
+
+.movie-section {
+  padding: 120px 8%;
+  background: #f6fbff;
+  text-align: center;
+}
+
+.movie-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.movie-section h2 {
+  font-size: 2.2rem;
+  color: #355c7d;
+  margin: 0 0 12px;
+}
+
+.movie-sub {
+  color: #6b7c8f;
+  margin: 0 0 60px;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 34px;
+}
+
+.movie-card {
+  background: rgba(255, 255, 255, 0.82);
+  border-radius: 24px;
+  padding: 22px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+  transition: 0.35s;
+}
+
+.movie-card:hover {
+  transform: translateY(-8px);
+}
+
+.movie-card video {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 18px;
+  display: block;
+  margin-bottom: 18px;
+  background: #000;
+}
+
+.movie-card h3 {
+  margin: 0 0 10px;
+  color: #355c7d;
+  font-size: 1.1rem;
+}
+
+.movie-card p {
+  margin: 0;
+  color: #666;
+  line-height: 1.8;
+  font-size: 0.95rem;
+}
+
+/* ===== responsive ===== */
+
+@media (max-width: 1000px) {
+  .movie-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .movie-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ===== Ending Movie ===== */
+
+.sunset-section {
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+}
+
+.sunset-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.ending-message {
+  padding: 100px 24px 140px;
+  background: #fffaf6;
+  text-align: center;
+}
+
+.ending-message p {
+  max-width: 900px;
+  margin: 0 auto;
+  line-height: 2.5;
+  color: #555;
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+}
+
+
+/* ===== TOPへ戻る ===== */
+
+.back-to-top {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 999;
+
+  padding: 12px 18px;
+  border-radius: 999px;
+
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(8px);
+
+  color: #355c7d;
+  text-decoration: none;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+
+  transition: 0.3s;
+}
+
+.back-to-top:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.92);
+}

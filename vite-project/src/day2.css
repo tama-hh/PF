@@ -1,0 +1,772 @@
+/* ===== DAY2ページ全体 ===== */
+.day2-scrap {
+    min-height: 100vh;
+    background: #f4efa8;
+    color: #4a3628;
+    padding: 42px 56px 120px;
+    box-sizing: border-box;
+    letter-spacing: 0.08em;
+}
+    
+.day2-scrap img {
+    box-sizing: border-box;
+}
+    
+/* ===== 上部3カラム ===== */
+.day2-header {
+    max-width: 1180px;
+    margin: 0 auto 34px;
+    display: grid;
+    grid-template-columns: 260px 1fr 285px;
+    gap: 34px;
+    align-items: start;
+}
+    
+/* ===== 左カラム ===== */
+.header-left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+    
+.title-art {
+    width: 250px;
+    display: block;
+}
+    
+.top-link {
+    position: relative;
+    z-index: 100;
+    pointer-events: auto;
+    top: -48px;
+    color: #bf5f15;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 1px solid #bf5f15;
+    width: fit-content;
+}
+    
+/* ===== 地図 ===== */
+.header-left .map-wrapper {
+    position: relative;
+    width: 400px;
+    margin-top: -70px;
+}
+    
+.header-left .okinawa-map {
+    width: 100%;
+    display: block;
+    opacity: 0.95;
+}
+    
+.header-left .marker-group {
+    position: absolute;
+    transform: translate(-160%, -50%);
+    opacity: 0.45;
+    transition: 0.25s ease;
+}
+    
+.header-left .map-marker {
+width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    display: block;
+    background: #c86518;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.65);
+}
+    
+/* DAY2地図ポイント位置 */
+.m-0930 { top: 30%; left: 53%; }
+.m-1100 { top: 28%; left: 50%; }
+.m-1400 { top: 32%; left: 51%; }
+.m-1500 { top: 37%; left: 60%; }
+.m-1700 { top: 50%; left: 44%; }
+.m-1745 { top: 50%; left: 44%; }
+.m-1900 { top: 49%; left: 43%; }
+.m-2020 { top: 50%; left: 44%; }
+    
+.marker-group.is-active {
+    opacity: 1;
+    transform: translate(-160%, -50%) scale(1.6);
+}
+    
+.marker-group.is-active .map-marker {
+    animation: pulseMarker 1.8s infinite;
+    box-shadow:
+    0 0 0 6px rgba(255, 255, 255, 0.85),
+    0 0 18px rgba(200, 101, 24, 0.95);
+}
+
+@keyframes pulseMarker {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.25); }
+    100% { transform: scale(1); }
+}
+    
+/* ===== 中央カラム ===== */
+.header-main {
+    position: relative;
+    min-height: 320px;
+}
+    
+.intro-area {
+    position: relative;
+    height: 130px;
+}
+    
+.intro-dino {
+    position: absolute;
+    left: -70px;
+    top: -8px;
+    width: 150px;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.35s ease, filter 0.35s ease;
+}
+    
+.intro-dino:hover {
+    transform: rotate(-6deg) scale(1.08);
+}
+    
+.speech-bubble {
+    position: absolute;
+    left: 40px;
+    top: 10px;
+    width: 440px;
+    padding: 24px 34px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.8;
+    font-weight: 700;
+    color: #5a4b3b;
+    background: rgba(255, 255, 255, 0.48);
+    border: 4px solid rgba(255, 255, 255, 0.85);
+    border-radius: 50%;
+}
+    
+.day2-schedule {
+    margin-left: 200px;
+    margin-top: 52px;
+}
+    
+.day2-schedule a {
+    display: block;
+    position: relative;
+    margin: 0 0 12px;
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 700;
+    color: #4a3628;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+    
+.day2-schedule a:hover {
+    transform: translateX(6px);
+    color: #c86518;
+}
+    
+.day2-schedule a::after {
+    content: "";
+    position: absolute;
+    left: -12px;
+    top: 50%;
+    width: 0;
+    height: 2px;
+    background: #c86518;
+    transition: 0.3s ease;
+}
+    
+.day2-schedule a:hover::after {
+    width: 8px;
+}
+    
+/* ===== 今日のコーデ ===== */
+.day2-scrap .outfit-card {
+    position: relative;
+    background: #ffc5a8;
+    width: 285px;
+    height: 420px;
+    min-height: 420px;
+    padding: 18px 18px 22px;
+    overflow: visible;
+    transform: rotate(1.5deg);
+    box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.12),
+    0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+    
+.day2-scrap .outfit-card:hover {
+    transform: translateY(-8px) rotate(2deg);
+    box-shadow:
+    0 28px 55px rgba(0, 0, 0, 0.18),
+    0 10px 22px rgba(0, 0, 0, 0.12);
+}
+    
+.day2-scrap .outfit-card h2 {
+    margin: 0 0 12px;
+    text-align: center;
+    color: #6a4c35;
+    font-size: 17px;
+    border-bottom: 2px solid #d1845a;
+    padding-bottom: 7px;
+    position: relative;
+    z-index: 4;
+}
+    
+.day2-scrap .outfit-card .outfit-girl {
+    position: absolute;
+    right: -400px;
+    top: 22px;
+    width: 450px;
+    height: auto;
+    max-width: none;
+    z-index: 3;
+}
+
+.day2-scrap .outfit-card .umbrella-art {
+    position: absolute;
+    left: 2px;
+    top: 90px;
+    width: 180px;
+    height: auto;
+    max-width: none;
+    max-height: none;
+    object-fit: contain;
+    opacity: 0.9;
+    z-index: 2;
+    transform: rotate(-8deg);
+    transition: transform 0.35s ease;
+}
+    
+.umbrella-art:hover {
+    transform: rotate(-6deg) scale(1.05);
+}
+    
+.day2-scrap .outfit-card p {
+    position: absolute;
+    left: 18px;
+    right: 18px;
+    bottom: 22px;
+    z-index: 4;
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.75;
+    font-weight: 700;
+    color: #6a4c35;
+    background: rgba(255, 255, 255, 0.72);
+    padding: 8px 10px;
+    border-radius: 14px;
+}
+    
+/* ===== タイムライン ===== */
+.day2-timeline {
+    max-width: 1180px;
+    margin: 34px auto 0;
+    position: relative;
+}
+    
+.day2-timeline::before {
+    content: "";
+    position: absolute;
+    left: 16px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #c86518;
+}
+    
+.memory-block {
+    position: relative;
+    display: grid;
+    grid-template-columns: 82px 1fr;
+    gap: 28px;
+    margin-bottom: 44px;
+    z-index: 1;
+}
+    
+.memory-block::before {
+    content: "";
+    position: absolute;
+    left: 6.5px;
+    top: 0;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    background: #c86518;
+    z-index: 2;
+}
+    
+.memory-block > .time {
+    margin-left: 36px;
+    width: fit-content;
+    height: fit-content;
+    background: #c86518;
+    color: #fff;
+    padding: 6px 12px;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.2;
+    border-radius: 2px;
+    position: relative;
+    z-index: 10;
+}
+    
+.memory-main {
+    position: relative;
+    padding-top: 12px;
+    z-index: 1;
+}
+    
+.memory-block::after {
+    content: "";
+    position: absolute;
+    left: 82px;
+    right: 0;
+    top: 12px;
+    height: 2px;
+    background: #c9a85e;
+    z-index: -1;
+}
+    
+.memory-main h2 {
+    margin: 0 0 14px 20px;
+    font-size: 23px;
+    color: #4a3628;
+    letter-spacing: 0.08em;
+}
+    
+.memory-main p {
+    margin: 14px 0 0;
+    font-size: 15px;
+    line-height: 2;
+    font-weight: 700;
+}
+    
+/* ===== 写真hover ===== */
+.day2-scrap .photos img,
+.day2-scrap .single-img,
+.day2-scrap video {
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    filter 0.35s ease;
+}
+    
+.day2-scrap .photos img:hover,
+.day2-scrap .single-img:hover,
+.day2-scrap video:hover {
+    transform: scale(1.08);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.22);
+    filter: brightness(1.06) saturate(1.06);
+    z-index: 30;
+}
+    
+/* ===== 09:30 プール ===== */
+.pool-morning {
+    padding-right: 260px;
+}
+    
+.swimset-morning {
+    position: absolute;
+    right: 10px;
+    top: 40px;
+    width: 250px;
+    height: auto;
+    transition: transform 0.35s ease;
+}
+    
+.swimset-morning:hover {
+    transform: rotate(6deg) scale(1.06);
+}
+
+
+/* ===== 11:00 美ら海 ===== */
+.churaumi-memory {
+    padding-right: 260px;
+    min-height: 430px;
+}
+
+.deco-fish {
+    position: absolute;
+    height: auto;
+    pointer-events: none;
+    transition: transform 0.35s ease;
+}
+
+.soushihagi {
+    left: 300px;
+    top: 60px;
+    width: 130px;
+}
+
+.hanatakasago {
+    left: 550px;
+    top: 40px;
+    width: 130px;
+}
+
+.cuttlefish {
+    right: 300px;
+    top: -30px;
+    width: 180px;
+}
+
+.deco-fish {
+    position: absolute;
+    height: auto;
+
+    pointer-events: auto;
+
+    transition:
+        transform 0.35s ease,
+        filter 0.35s ease;
+}
+
+.deco-fish:hover {
+    transform:
+        translateY(-6px)
+        rotate(-6deg)
+        scale(1.08);
+
+    filter:
+        drop-shadow(0 10px 14px rgba(0,0,0,0.16));
+}
+
+/* ===== マナティー動画リンク ===== */
+
+.manatee-card {
+    position: absolute;
+    right: 100px;
+    top: 340px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 100;
+}
+
+.manatee-links {
+    width: 180px;
+    padding: 18px 20px;
+    background: #fff;
+    border-radius: 999px;
+    font-size: 12px;
+    line-height: 1.8;
+    font-weight: 700;
+    color: #5a4032;
+    box-shadow:
+        0 8px 18px rgba(0,0,0,0.08);
+}
+
+.manatee-links a {
+    color: #5a4032;
+    text-decoration: none;
+    border-bottom: 1px dashed #d1845a;
+    transition: 0.25s ease;
+}
+
+.manatee-links a:hover {
+    color: #d1845a;
+}
+
+.manatee-card img {
+    width: 150px;
+    height: auto;
+    object-fit: contain;
+    transition:
+        transform 0.35s ease,
+        filter 0.35s ease;
+}
+
+.manatee-card img:hover {
+    transform: rotate(4deg) scale(1.04);
+}
+
+.churaumi-memory {
+    position: relative;
+    z-index: 5;
+}
+
+.manatee-card {
+    z-index: 200;
+}
+
+.manatee-links {
+    position: relative;
+    z-index: 201;
+}
+
+.manatee-card img {
+    position: relative;
+    z-index: 202;
+}
+
+
+/* ===== 14:00 きしもと ===== */
+.kishimoto-memory {
+    padding-right: 300px;
+    min-height: 300px;
+}
+    
+.starfish-deco {
+    position: absolute;
+    right: 300px;
+    top: 140px;
+    width: 200px;
+    height: auto;
+    transition: transform 0.35s ease;
+}
+    
+.starfish-deco:hover {
+    transform: rotate(8deg) scale(1.06);
+}
+    
+.junglia-card {
+    position: absolute;
+    right: -20px;
+    top: 200px;
+    width: 270px;
+    background: #ffd74a;
+    padding: 24px 22px;
+    box-sizing: border-box;
+    z-index: 100;
+}
+    
+.junglia-card img {
+    width: 220px;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 12px;
+}
+    
+.junglia-card p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.8;
+}
+    
+/* ===== 15:00 パイナップルパーク ===== */
+.pineapple-memory {
+    padding-right: 330px;
+    min-height: 360px;
+}
+    
+.pinosaur-card {
+    position: absolute;
+    right: -40px;
+    top: 0;
+    width: 330px;
+    height: 260px;
+    z-index: 100;
+}
+    
+.pinosaur-logo {
+    position: absolute;
+    left: 10px;
+    top: 100px;
+    width: 400px;
+    transform: rotate(-5deg);
+    z-index: 1;
+}
+
+.pine-ptera {
+    position: absolute;
+    left: 0;
+    top: 90px;
+    width: 150px;
+    z-index: 6;
+        transition: transform 0.35s ease;
+        filter: 0.35s ease;
+}
+    
+.pine-spino {
+    position: absolute;
+    left: 180px;
+    top: 200px;
+    width: 280px;
+    z-index: 5;
+    transition:
+        transform 0.35s ease,
+        filter 0.35s ease;
+}
+
+.pine-ptera:hover,
+.pine-spino:hover {
+    transform:
+        translateY(-6px)
+        rotate(-5deg)
+        scale(1.06);
+
+    filter:
+        drop-shadow(0 10px 16px rgba(0,0,0,0.18));
+}
+    
+/* ===== パイナソー動画リンク ===== */
+
+.pinosaur-links {
+    position: absolute;
+    left: 70px;
+    top: 320px;
+    width: 150px;
+    margin: 0;
+    padding: 16px 18px;
+    background: #fff;
+    border-radius: 50%;
+    font-size: 12px;
+    line-height: 1.8;
+    text-align: center;
+    font-weight: 700;
+    color: #5a4032;
+    box-shadow:
+        0 8px 18px rgba(0,0,0,0.08);
+    z-index: 5;
+}
+
+.pinosaur-links a {
+    color: #5a4032;
+    text-decoration: none;
+    border-bottom: 1px dashed #d1845a;
+    transition:
+        color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.pinosaur-links a:hover {
+    color: #d1845a;
+    border-color: #d1845a;
+}
+    
+/* ===== 17:00 アクアセンス ===== */
+.aquasense-memory {
+    padding-right: 230px;
+}
+    
+.swimset-evening {
+    position: absolute;
+    right: -20px;
+    top: 200px;
+    width: 250px;
+    height: auto;
+    transition: transform 0.35s ease;
+}
+    
+.swimset-evening:hover {
+    transform: rotate(-5deg) scale(1.06);
+}
+    
+/* ===== 17:45 オリオン ===== */
+.orion-memory {
+    padding-right: 330px;
+    min-height: 240px;
+}
+    
+.orion-shirt-deco {
+    position: absolute;
+    right: 10px;
+    top: 150px;
+    width: 250px;
+    height: auto;
+    transition: transform 0.35s ease;
+}
+    
+.orion-shirt-deco:hover {
+    transform: rotate(5deg) scale(1.05);
+}
+    
+/* ===== 19:00 ちぬまん ===== */
+.chinuman-memory .photos {
+    align-items: flex-start;
+}
+    
+/* ===== 20:20 夜 ===== */
+.night-memory {
+    min-height: 260px;
+}
+    
+/* ===== aside共通：立体感 ===== */
+.junglia-card {
+    border-radius: 6px;
+    box-shadow:
+    0 14px 28px rgba(0, 0, 0, 0.12),
+    0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+    
+.junglia-card:hover {
+    transform: translateY(-6px) rotate(-1deg);
+    box-shadow:
+    0 22px 40px rgba(0, 0, 0, 0.18),
+    0 10px 20px rgba(0, 0, 0, 0.10);
+}
+    
+.junglia-card::before,
+.outfit-card::after {
+    content: "";
+    position: absolute;
+    width: 90px;
+    height: 20px;
+    background: rgba(255, 190, 220, 0.72);
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-6deg);
+    z-index: 20;
+}
+    
+/* card持ちブロックを前面：下の予定の線より上に出す */
+.memory-block.has-churaumi-card {
+    z-index: 90;
+}
+
+.memory-block.has-junglia-card {
+    z-index: 80;
+}
+
+.memory-block.has-pinosaur-card {
+    z-index: 70;
+}
+
+/* はみ出すaside本体も前面 */
+.has-churaumi-card .manatee-card,
+.has-junglia-card .junglia-card,
+.has-pinosaur-card .pinosaur-card {
+    z-index: 999;
+}
+    
+/* ===== ページ右下 ===== */
+.day2-end {
+    position: relative;
+    height: 280px;
+}
+    
+.honoka-cutout {
+    position: absolute;
+    right: 40px;
+    bottom: 0;
+    width: 150px;
+    height: auto;
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+    
+.honoka-cutout:hover {
+    transform: translateY(-6px) rotate(-4deg) scale(1.05);
+    filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.18));
+}
+    
+.back-top-link {
+    position: absolute;
+    right: 210px;
+    bottom: 18px;
+    color: #6a4c35;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+}

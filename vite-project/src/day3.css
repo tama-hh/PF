@@ -1,0 +1,774 @@
+/* ===== DAY3ページ全体 ===== */
+.day3-scrap {
+    min-height: 100vh;
+    background: #f7cfe0;
+    color: #5a4032;
+    padding: 42px 56px 120px;
+    box-sizing: border-box;
+    letter-spacing: 0.08em;
+    }
+    
+    .day3-scrap img {
+    box-sizing: border-box;
+    }
+    
+    /* ===== 上部3カラム ===== */
+    .day3-header {
+    max-width: 1180px;
+    margin: 0 auto 34px;
+    display: grid;
+    grid-template-columns: 260px 1fr 285px;
+    gap: 34px;
+    align-items: start;
+    }
+    
+    /* ===== 左カラム ===== */
+    .header-left {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    }
+    
+    .title-art {
+    width: 250px;
+    display: block;
+    }
+    
+    .top-link {
+    position: relative;
+    z-index: 100;
+    pointer-events: auto;
+    top: -48px;
+    color: #b83550;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 1px solid #b83550;
+    width: fit-content;
+    }
+    
+    /* ===== 地図 ===== */
+    .header-left .map-wrapper {
+    position: relative;
+    width: 400px;
+    margin-top: -70px;
+    }
+    
+    .header-left .okinawa-map {
+    width: 100%;
+    display: block;
+    opacity: 0.95;
+    }
+    
+    .header-left .marker-group {
+    position: absolute;
+    transform: translate(-160%, -50%);
+    opacity: 0.45;
+    transition: 0.25s ease;
+    }
+    
+    .header-left .map-marker {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    display: block;
+    background: #b83550;
+    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.65);
+    }
+    
+/* DAY3地図ポイント位置 */
+.m-0830 { top: 50%; left: 44%; }
+.m-1200 { top: 65%; left: 41%; }
+.m-1730 { top: 55%; left: 34%; }
+.m-1830 { top: 68%; left: 36%; }
+    
+    .marker-group.is-active {
+    opacity: 1;
+    transform: translate(-160%, -50%) scale(1.6);
+    }
+    
+    .marker-group.is-active .map-marker {
+    animation: pulseMarker 1.8s infinite;
+    box-shadow:
+    0 0 0 6px rgba(255, 255, 255, 0.85),
+    0 0 18px rgba(184, 53, 80, 0.95);
+    }
+    
+    @keyframes pulseMarker {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.25); }
+    100% { transform: scale(1); }
+    }
+    
+    /* ===== 中央カラム ===== */
+    .header-main {
+    position: relative;
+    min-height: 320px;
+    }
+    
+    .intro-area {
+    position: relative;
+    height: 130px;
+    }
+    
+    .intro-cameraman {
+    position: absolute;
+    right: -40px;
+    top: -28px;
+    width: 160px;
+    height: auto;
+    object-fit: contain;
+    transition: transform 0.35s ease, filter 0.35s ease;
+    }
+    
+    .intro-cameraman:hover {
+    transform: translateY(-6px) rotate(4deg) scale(1.06);
+    filter: drop-shadow(0 10px 14px rgba(0,0,0,0.16));
+    }
+    
+    .speech-bubble {
+    position: absolute;
+    left: 40px;
+    top: 10px;
+    width: 360px;
+    padding: 24px 34px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.8;
+    font-weight: 700;
+    color: #5a4b3b;
+    background: rgba(255, 255, 255, 0.48);
+    border: 4px solid rgba(255, 255, 255, 0.85);
+    border-radius: 50%;
+    }
+    
+    .day3-schedule {
+    margin-left: 200px;
+    margin-top: 52px;
+    }
+    
+    .day3-schedule a {
+    display: block;
+    position: relative;
+    margin: 0 0 12px;
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 700;
+    color: #5a4032;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.25s ease;
+    }
+    
+    .day3-schedule a:hover {
+    transform: translateX(6px);
+    color: #b83550;
+    }
+    
+    .day3-schedule a::after {
+    content: "";
+    position: absolute;
+    left: -12px;
+    top: 50%;
+    width: 0;
+    height: 2px;
+    background: #b83550;
+    transition: 0.3s ease;
+    }
+    
+    .day3-schedule a:hover::after {
+    width: 8px;
+    }
+    
+    /* ===== 今日のコーデ ===== */
+    .day3-scrap .outfit-card {
+    position: relative;
+    background: #e9a3bf;
+    width: 285px;
+    height: 420px;
+    min-height: 420px;
+    padding: 18px 18px 22px;
+    overflow: visible;
+    transform: rotate(1.5deg);
+    box-shadow:
+    0 18px 40px rgba(0, 0, 0, 0.12),
+    0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    }
+    
+    .day3-scrap .outfit-card:hover {
+    transform: translateY(-8px) rotate(2deg);
+    box-shadow:
+    0 28px 55px rgba(0, 0, 0, 0.18),
+    0 10px 22px rgba(0, 0, 0, 0.12);
+    }
+    
+    .day3-scrap .outfit-card h2 {
+    margin: 0 0 12px;
+    text-align: center;
+    color: #6a4c35;
+    font-size: 17px;
+    border-bottom: 2px solid #b83550;
+    padding-bottom: 7px;
+    position: relative;
+    z-index: 4;
+    }
+    
+    .day3-scrap .outfit-card .outfit-girl {
+    position: absolute;
+    right: -120px;
+    top: 48px;
+    width: 420px;
+    height: auto;
+    max-width: none;
+    z-index: 3;
+    }
+    
+    .day3-scrap .outfit-card p {
+    position: absolute;
+    left: 18px;
+    right: 18px;
+    bottom: 22px;
+    z-index: 4;
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.75;
+    font-weight: 700;
+    color: #6a4c35;
+    background: rgba(255, 255, 255, 0.72);
+    padding: 8px 10px;
+    border-radius: 14px;
+    }
+    
+    /* ===== タイムライン ===== */
+    .day3-timeline {
+    max-width: 1180px;
+    margin: 34px auto 0;
+    position: relative;
+    }
+    
+    .day3-timeline::before {
+    content: "";
+    position: absolute;
+    left: 16px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #b83550;
+    }
+    
+    .memory-block {
+    position: relative;
+    display: grid;
+    grid-template-columns: 82px 1fr;
+    gap: 28px;
+    margin-bottom: 44px;
+    z-index: 1;
+    }
+    
+    .memory-block::before {
+    content: "";
+    position: absolute;
+    left: 6.5px;
+    top: 0;
+    width: 23px;
+    height: 23px;
+    border-radius: 50%;
+    background: #b83550;
+    z-index: 2;
+    }
+    
+    .memory-block::after {
+    content: "";
+    position: absolute;
+    left: 82px;
+    right: 0;
+    top: 12px;
+    height: 2px;
+    background: #c9a85e;
+    z-index: -1;
+    }
+    
+    .memory-block > .time {
+    margin-left: 36px;
+    width: fit-content;
+    height: fit-content;
+    background: #b83550;
+    color: #fff;
+    padding: 6px 12px;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.2;
+    border-radius: 2px;
+    position: relative;
+    z-index: 10;
+    }
+    
+    .memory-main {
+    position: relative;
+    padding-top: 12px;
+    z-index: 1;
+    }
+    
+    .memory-main h2 {
+    margin: 0 0 14px 20px;
+    font-size: 23px;
+    color: #5a4032;
+    letter-spacing: 0.08em;
+    }
+    
+    .memory-main p {
+    margin: 14px 0 0;
+    font-size: 15px;
+    line-height: 2;
+    font-weight: 700;
+    }
+    
+    /* ===== 通常写真 ===== */
+    .day3-scrap .photos img,
+    .day3-scrap .scrap-photo {
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    filter 0.35s ease;
+    }
+    
+    .day3-scrap .photos img:hover,
+    .day3-scrap .scrap-photo:hover {
+    transform: scale(1.08);
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.22);
+    filter: brightness(1.06) saturate(1.06);
+    z-index: 80;
+    }
+    
+    /* ===== 08:30 海 ===== */
+    .sea-memory {
+    padding-right: 260px;
+    min-height: 260px;
+    }
+    
+    .swimset-deco {
+    position: absolute;
+    right: 10px;
+    top: 80px;
+    width: 250px;
+    height: auto;
+    transition: transform 0.35s ease, filter 0.35s ease;
+    }
+    
+    .swimset-deco:hover {
+    transform: rotate(6deg) scale(1.06);
+    filter: drop-shadow(0 10px 14px rgba(0,0,0,0.16));
+    }
+    
+    /* ===== 12:00 Walz ===== */
+    .walz-memory {
+    min-height: 270px;
+    }
+
+/* ===== マスキングテープ風タイトル ===== */
+.tape-title {
+    position: relative;
+    display: inline-block;
+    padding: 16px 42px 14px;
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: 0.12em;
+    color: #6a4c35;
+    background:
+        repeating-linear-gradient(
+            -45deg,
+            rgba(255,255,255,0.28) 0,
+            rgba(255,255,255,0.28) 8px,
+            rgba(255,255,255,0.08) 8px,
+            rgba(255,255,255,0.08) 16px
+        ),
+        rgba(255, 245, 170, 0.86);
+    box-shadow:
+        0 10px 18px rgba(0,0,0,0.10),
+        inset 0 0 0 2px rgba(255,255,255,0.35);
+    border-radius: 4px;
+    z-index: 20;
+    transform: rotate(-3deg);
+}
+
+.tape-title::before,
+.tape-title::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 22px;
+    height: 100%;
+    background: inherit;
+    opacity: 0.82;
+}
+
+.tape-title::before {
+    left: -14px;
+    clip-path: polygon(0 0, 100% 8%, 100% 92%, 0 100%, 22% 50%);
+}
+
+.tape-title::after {
+    right: -14px;
+    clip-path: polygon(0 8%, 100% 0, 78% 50%, 100% 100%, 0 92%);
+}
+
+.tape-title:hover {
+    transform: translateY(-5px) rotate(-2deg) scale(1.03);
+    filter: drop-shadow(0 10px 14px rgba(0,0,0,0.14));
+}
+
+/* 個別配置 */
+.american-tape {
+    margin-left: -10px;
+    margin-bottom: -20px;
+    background:
+        repeating-linear-gradient(
+            -45deg,
+            rgba(255,255,255,0.28) 0,
+            rgba(255,255,255,0.28) 8px,
+            rgba(255,255,255,0.08) 8px,
+            rgba(255,255,255,0.08) 16px
+        ),
+        rgba(255, 185, 210, 0.9);
+}
+
+.momenbaru-tape {
+    position: relative;
+
+    margin-left: 560px;
+    margin-bottom: -20px;
+
+    top: -240px;
+
+    background:
+        repeating-linear-gradient(
+            -45deg,
+            rgba(255,255,255,0.30) 0,
+            rgba(255,255,255,0.30) 8px,
+            rgba(255,255,255,0.08) 8px,
+            rgba(255,255,255,0.08) 16px
+        ),
+        rgba(166, 224, 214, 0.9);
+
+    transform: rotate(3deg);
+}
+
+.momenbaru-tape:hover {
+    transform:
+        translateY(-5px)
+        rotate(3deg)
+        scale(1.03);
+}
+
+.offshot-tape {
+    margin-left: 30px;
+    margin-bottom: -10px;
+    font-size: 30px;
+    background:
+        repeating-linear-gradient(
+            -45deg,
+            rgba(255,255,255,0.30) 0,
+            rgba(255,255,255,0.30) 8px,
+            rgba(255,255,255,0.08) 8px,
+            rgba(255,255,255,0.08) 16px
+        ),
+        rgba(255, 232, 128, 0.9);
+    transform: rotate(-5deg);
+}
+
+    /* ===== スクラップ共通 ===== */
+    .scrap-section {
+    max-width: 1180px;
+    margin: 46px auto 84px;
+    position: relative;
+    }
+    
+    .section-logo {
+    position: relative;
+    display: block;
+    height: auto;
+    z-index: 20;
+    pointer-events: auto;
+    transition: transform 0.35s ease, filter 0.35s ease;
+    }
+    
+    .section-logo:hover {
+    transform: translateY(-5px) rotate(-2deg) scale(1.03);
+    filter: drop-shadow(0 10px 16px rgba(0,0,0,0.12));
+    }
+    
+    .american-logo {
+    width: 580px;
+    margin-left: -22px;
+    margin-bottom: -40px;
+    }
+    
+    .momenbaru-logo {
+    width: 520px;
+    margin-left: 560px;
+    margin-top: -180px;
+    }
+    
+    .offshot-logo {
+    width: 300px;
+    margin-left: 28px;
+    margin-bottom: -20px;
+    }
+    
+    .collage {
+    position: relative;
+    min-height: 680px;
+    }
+    
+    .scrap-photo {
+    position: absolute;
+    display: block;
+    object-fit: cover;
+    box-shadow:
+    0 16px 32px rgba(0,0,0,0.12),
+    0 4px 8px rgba(0,0,0,0.08);
+    }
+    
+/* ===== スクラップ写真：崩れない・縦横比そのまま版 ===== */
+
+.collage {
+    width: 100%;
+    max-width: 1060px;
+    margin: 0 auto;
+}
+
+.scrap-photo {
+    position: static;
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: unset;
+    box-shadow:
+        0 12px 24px rgba(0,0,0,0.14),
+        0 4px 8px rgba(0,0,0,0.08);
+}
+
+/* ===== アメリカンヴィレッジ ===== */
+.american-collage {
+    display: grid;
+    grid-template-columns: 280px 360px 320px;
+    grid-template-areas:
+        "kiss angel run"
+        "orange angel hug"
+        "orange stairs sunglasses";
+    gap: 28px 26px;
+    align-items: start;
+    padding-top: 30px;
+}
+
+.av-kiss {
+    grid-area: kiss;
+    transform: rotate(-2deg);
+}
+
+.av-angel {
+    grid-area: angel;
+    transform: rotate(0deg);
+    width: 500px;
+}
+
+.av-run {
+    grid-area: run;
+    transform: rotate(-4deg);
+    width: 400px;
+}
+
+.av-orange {
+    grid-area: orange;
+    transform: rotate(3deg);
+    width: 300px;
+    top: -50px;
+}
+
+.av-hug {
+    grid-area: hug;
+    transform: rotate(2deg);
+    top: -200px;
+    left: 100px;
+}
+
+.av-stairs {
+    grid-area: stairs;
+    transform: rotate(-4deg);
+    top: -300px;
+}
+
+.av-sunglasses {
+    grid-area: sunglasses;
+    transform: rotate(5deg);
+    top: -300px;
+    width: 400px;
+}
+
+/* ===== 木綿原ビーチ ===== */
+.momenbaru-collage {
+    display: grid;
+    grid-template-columns: 310px 360px 310px;
+    grid-template-areas:
+        "sunset forest walking"
+        "honoka forest bigring"
+        "selfie ring couple";
+
+    gap: 32px 28px;
+    align-items: start;
+    padding-top: 0;
+
+    margin-top: -220px;
+}
+
+.mb-sunset {
+    grid-area: sunset;
+    transform: rotate(-2deg);
+}
+
+.mb-forest {
+    grid-area: forest;
+    transform: rotate(2deg);
+    width: 500px;
+}
+
+.mb-walking {
+    grid-area: walking;
+    transform: rotate(-3deg);
+    width: 400px;
+}
+
+.mb-honoka {
+    grid-area: honoka;
+    transform: rotate(3deg);
+}
+
+.mb-big-ring {
+    grid-area: bigring;
+    transform: rotate(5deg);
+    left: 50px;
+}
+
+.mb-selfie {
+    grid-area: selfie;
+    transform: rotate(-5deg);
+    top: -100px;
+}
+
+.mb-ring {
+    grid-area: ring;
+    transform: rotate(2deg);
+    top: -80px;
+}
+
+.mb-couple {
+    grid-area: couple;
+    transform: rotate(3deg);
+    top: -200px;
+    width: 400px;
+}
+
+/* ===== おまけ ===== */
+.offshot-collage {
+    display: grid;
+    grid-template-columns: 260px 280px 300px;
+    grid-template-areas:
+        "car store walking"
+        "car store setting";
+    gap: 30px 32px;
+    align-items: start;
+    padding-top: 30px;
+}
+
+.off-car {
+    grid-area: car;
+    transform: rotate(-5deg);
+    width: 400px;
+}
+
+.off-store {
+    grid-area: store;
+    transform: rotate(5deg);
+}
+
+.off-walking {
+    grid-area: walking;
+    transform: rotate(4deg);
+}
+
+.off-setting {
+    grid-area: setting;
+    transform: rotate(6deg);
+    width: 400px;
+    top: -100px;
+    left: 100px;
+}
+    
+    
+    /* ===== 下側タイムライン ===== */
+    .lower-timeline {
+    margin-top: 20px;
+    }
+    
+    .alivila-memory {
+    min-height: 260px;
+    }
+    
+    /* ===== 夜アメリカン ===== */
+    .night-american-memory {
+    min-height: 360px;
+    padding-right: 0;
+    }
+    
+    .memo-card {
+    width: 380px;
+    margin: 42px 0 0 34px;
+    padding: 22px 26px;
+    background: #f5ef9a;
+    transform: rotate(-6deg);
+    box-shadow:
+    0 14px 28px rgba(0,0,0,0.10),
+    0 4px 10px rgba(0,0,0,0.08);
+    }
+    
+    .memo-card p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 2;
+    }
+    
+    .fly-honoka-deco {
+    position: absolute;
+    right: 30px;
+    top: 700px;
+    width: 190px;
+    height: auto;
+    transition: transform 0.4s ease, filter 0.4s ease;
+    }
+    
+    .fly-honoka-deco:hover {
+    transform: translateY(-8px) rotate(-5deg) scale(1.06);
+    filter: drop-shadow(0 10px 18px rgba(0,0,0,0.18));
+    }
+    
+    /* ===== ページ下 ===== */
+    .day3-end {
+    position: relative;
+    height: 240px;
+    }
+    
+    .back-top-link {
+    position: absolute;
+    right: 300px;
+    bottom: 18px;
+    color: #6a4c35;
+    font-size: 13px;
+    font-weight: 700;
+    text-decoration: none;
+    }

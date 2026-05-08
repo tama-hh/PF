@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>沖縄新婚旅行</title>
+  </head>
+  <body>
+    <header class="hero" id="hero">
+      <video autoplay muted loop playsinline class="bg-video" id="bgVideo">
+        <source src="./public/honeymoon.mp4" type="video/mp4" />
+      </video>
+
+      <div class="hero-dark"></div>
+
+      <div class="overlay" id="overlay">
+        <p class="sub-copy">2025/06/23〜06/26</p>
+        <h1>Honeymoon</h1>
+        <p class="main-copy">in 沖縄</p>
+        <a
+  class="move-text"
+  href="https://youtu.be/P9mCM-n106Q?si=7swwleT50jIq7aB0"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  動画フル再生
+</a>
+      </div>
+    </header>
+
+    <section class="content">
+      <div class="content-inner">
+        <h2>観光スケジュール</h2>
+      </div>
+    </section>
+
+    <section class="trip-summary">
+      <div class="trip-column left">
+        <div class="day-card day1" data-day="day1">
+          <h3>1日目　6/23</h3>
+          <ul>
+            <li>那覇空港到着</li>
+            <li>道の駅 ゆいゆい国頭</li>
+            <li>辺戸岬</li>
+            <li>ヤンバルクイナ展望台</li>
+            <li>ヤンバルクイナ生態展示学習施設</li>
+            <li>ALMIS NAKIJIN</li>
+            <li>今帰仁アグー料理一式長堂屋本店</li>
+            <li>タウンプラザかねひで今帰仁桜市場</li>
+          </ul>
+          <a class="memory-button" href="./day1.html">思い出はこちら</a>
+        </div>
+
+        <div class="day-card day2" data-day="day2">
+          <h3>2日目　6/24</h3>
+          <ul>
+            <li>沖縄美ら海水族館</li>
+            <li>元祖木炭沖縄そば きしもと食堂</li>
+            <li>ナゴパイナップルパーク</li>
+            <li>アクアセンスホテル＆リゾート チェックイン</li>
+            <li>沖縄料理ちぬまん万座邸</li>
+          </ul>
+          <a class="memory-button" href="./day2.html">思い出はこちら</a>
+        </div>
+      </div>
+
+      <div class="trip-map-center">
+        <div class="map-wrapper">
+          <img
+            src="./public/okinawa-map-transparent.png"
+            alt="沖縄地図"
+            class="okinawa-map"
+          />
+          
+          <!-- 1日目 -->
+          <div class="marker-group day1-marker" style="top: 80%; left: 28%;">
+            <span class="map-marker"></span>
+            <span class="marker-label">那覇空港</span>
+          </div>
+
+          <div class="marker-group day1-marker" style="top: 26%; left: 78%;">
+            <span class="map-marker"></span>
+            <span class="marker-label">ゆいゆい国頭</span>
+          </div>
+
+          <div class="marker-group day1-marker" style="top: 10%; left: 83%;">
+            <span class="map-marker"></span>
+            <span class="marker-label">辺戸岬</span>
+          </div>
+
+          <div class="marker-group day1-marker" style="top: 12%; left: 93%;">
+            <span class="map-marker"></span>
+            <span class="marker-label">ヤンバルクイナ展望台</span>
+          </div>
+
+          <div class="marker-group day1-marker" style="top: 26%; left: 91%;">
+            <span class="map-marker"></span>
+            <span class="marker-label">展示学習施設</span>
+          </div>
+
+          <div class="marker-group day1-marker" style="top: 30%; left: 53%;">
+            <span class="map-marker"></span>
+            <span class="marker-label">ALMIS</span>
+          </div>
+
+          <div class="marker-group day1-marker" style="top: 30%; left: 60%;">
+            <span class="map-marker"></span>
+            <span class="marker-label">長堂屋本店</span>
+          </div>
+
+          <div class="marker-group day1-marker" style="top: 28%; left: 59%;">
+            <span class="map-marker"></span>
+            <span class="marker-label">かねひで市場</span>
+          </div>
+
+          <!-- 2日目 -->
+          <div class="marker-group day2-marker" style="top: 30%; left: 51%;">
+            <span class="map-marker"></span>
+            <span class="marker-label">美ら海水族館</span>
+          </div>
+
+          <div class="marker-group day2-marker" style="top: 32%; left: 53%;">
+            <span class="map-marker"></span>
+            <span class="marker-label">きしもと食堂</span>
+          </div>
+
+          <div class="marker-group day2-marker" style="top: 35%; left: 60%;">
+            <span class="map-marker"></span>
+            <span class="marker-label">パイナップルパーク</span>
+          </div>
+
+          <div class="marker-group day2-marker" style="top: 50%; left: 50%;">
+            <span class="map-marker"></span>
+            <span class="marker-label">アクアセンス</span>
+          </div>
+
+          <div class="marker-group day2-marker" style="top: 50%; left: 50%;">
+            <span class="map-marker"></span>
+            <span class="marker-label">ちぬまん</span>
+          </div>
+
+          <!-- 3日目 -->
+          <div class="marker-group day3-marker" style="top: 66%; left: 46%;">
+            <span class="map-marker"></span>
+            <span class="marker-label">Walz Wedding</span>
+          </div>
+
+          <div class="marker-group day3-marker" style="top: 68%; left: 44%;">
+            <span class="map-marker"></span>
+            <span class="marker-label">アメリカンヴィレッジ</span>
+          </div>
+
+          <div class="marker-group day3-marker" style="top: 64%; left: 38%;">
+            <span class="map-marker"></span>
+            <span class="marker-label">木綿原ビーチ</span>
+          </div>
+
+          <div class="marker-group day3-marker" style="top: 60%; left: 40%;">
+            <span class="map-marker"></span>
+            <span class="marker-label">ホテル日航アリビラ</span>
+          </div>
+
+          <!-- 4日目 -->
+          <div class="marker-group day4-marker" style="top: 86%; left: 44%;">
+            <span class="map-marker"></span>
+            <span class="marker-label">おきなわワールド</span>
+          </div>
+
+          <div class="marker-group day4-marker" style="top: 80%; left: 28%;">
+            <span class="map-marker"></span>
+            <span class="marker-label">那覇空港</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="trip-column right">
+        <div class="day-card day3" data-day="day3">
+          <h3>3日目　6/25</h3>
+          <ul>
+            <li>Walz Wedding</li>
+            <li>アメリカンヴィレッジ</li>
+            <li>木綿原ビーチ</li>
+            <li>ホテル日航アリビラ チェックイン</li>
+          </ul>
+          <a class="memory-button" href="./day3.html">思い出はこちら</a>
+        </div>
+
+        <div class="day-card day4" data-day="day4">
+          <h3>4日目　6/26</h3>
+          <ul>
+            <li>おきなわワールド</li>
+            <li>那覇空港出発</li>
+          </ul>
+          <a class="memory-button" href="./day4.html">思い出はこちら</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="good-items">
+      <h2>持っていってよかった物</h2>
+      <p class="items-sub">沖縄で実際に「持ってきてよかった！」と思ったものたち</p>
+    
+      <div class="items-grid">
+        <div class="item-card">
+          <img src="./public/item-float.png" alt="浮き輪">
+          <h3>浮き輪</h3>
+          <p>
+            メイクを崩さずちょっとの合間にも楽しみたいって時にプカプカ浮かべて楽しかった！<br>
+            もちろんガッツリも泳いで2通りの遊び方ができたよ。
+            </p>
+        </div>
+    
+        <div class="item-card">
+          <img src="./public/item-waterproof-phonecase.png" alt="防水スマホケース">
+          <h3>防水スマホケース</h3>
+          <p>
+            水遊び中、肌身離さず貴重品を持ち運べるから荷物置き場をチラチラ確認することなく楽しめる！<br>
+            水中撮影でお魚も撮影できたよ。
+            </p>
+        </div>
+    
+        <div class="item-card">
+          <img src="./public/item-uv-parker.png" alt="羽織りもの UVパーカー">
+          <h3>羽織りものUVパーカー</h3>
+          <p>
+            日焼け止めを塗っていても、車での長距離移動中の日差しが危ない！<br>
+            室内の冷房との寒暖差対策にも重宝したよ。
+            </p>
+        </div>
+    
+        <div class="item-card">
+          <img src="./public/item-smartphone-shoulder.png" alt="スマホショルダー">
+          <h3>スマホショルダー</h3>
+          <p>旅行中、写真を撮って思い出に残しておきたい瞬間がたくさん！<br>
+            ササッとパシャッと素早く撮れたよ。<br>
+            旅行中の置き忘れ防止にも！
+            </p>
+        </div>
+    
+        <div class="item-card">
+          <img src="./public/item-melano-cc.png" alt="メラノCC化粧水と乳液">
+          <h3>メラノCC　化粧水＆乳液</h3>
+          <p>
+            美容系YouTuberが沖縄旅行で使っていたのを真似して、顔だけじゃなく全身に塗りたくってた。<br>
+            肌治安が維持できたのはこのおかげ？
+            </p>
+        </div>
+    
+        <div class="item-card">
+          <img src="./public/item-umbrella.png" alt="晴雨兼用折りたたみ傘">
+          <h3>晴雨兼用折りたたみ傘</h3>
+          <p>
+            突然の土砂降りに何度も遭遇したから、持っていって本当によかった！<br>
+            晴雨兼用にしておくと日傘としても使えるから沖縄の天気を制することができる！
+            </p>
+        </div>
+    
+        <div class="item-card">
+          <img src="./public/item-sunglasses.png" alt="サングラス">
+          <h3>サングラス</h3>
+          <p>ギラつく日差しがチャームポイントの沖縄にはもちろん必須！<br>
+            夫とお揃いで写真映えもバッチリ！</p>
+        </div>
+    
+        <div class="item-card">
+          <img src="./public/item-hat.png" alt="帽子">
+          <h3>帽子</h3>
+          <p>紐付きなら海辺の風も怖くない！<br>
+            バケットハットは前髪も崩れにくくて脱いだ時のビジュも安心。</p>
+        </div>
+    
+        <div class="item-card">
+          <img src="./public/item-sunscreen.png" alt="日焼け止め">
+          <h3>日焼け止め</h3>
+          <p>
+            クリームとスプレーの二刀流で日焼け対策！<br>
+            メインは個人的に信頼しているアネッサで、スプレーは顔や髪、首元の塗り直しに。
+            </p>
+        </div>
+    
+        <div class="item-card">
+          <img src="./public/item-foot-sheet.png" alt="休息時間 足裏シート">
+          <h3>休息時間足裏シート</h3>
+          <p>ちょっと痛いけどスッキリする優れ物。<br>
+            翌朝の身支度中も貼ったままにしてたから、さらに浮腫み取りができた気がする。</p>
+        </div>
+    
+        <div class="item-card">
+          <img src="./public/item-handy-fan.png" alt="ハンディファン">
+          <h3>ハンディファン</h3>
+          <p>
+            夏の必需品はもちろん沖縄でも大活躍！<br>
+            屋外の観光施設でバテずに最後まで楽しめたのはこれのおかげ！
+            </p>
+        </div>
+    
+        <div class="item-card">
+          <img src="./public/item-insect-repellent.png" alt="虫除けリングと虫除けスプレー">
+          <h3>虫除けリング＆虫除けスプレー</h3>
+          <p>
+            母の影響で、旅行には毎回必ず虫除けを持っていく！<br>
+            地域が変わると虫も変わって免疫がないから、めちゃくちゃ腫れる場合もあるらしい？
+            </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="outfit-section">
+      <div class="outfit-inner">
+        <h2>旅のコーディネイト</h2>
+        <p class="outfit-sub">旅行中のリアルコーデを日ごとにまとめました</p>
+    
+        <div class="outfit-grid">
+          <div class="outfit-card">
+            <p class="outfit-day">1日目</p>
+            <img src="/outfit-day1.png" alt="1日目のコーディネイト">
+            <p class="outfit-text">
+              せっかくの沖縄だから足出しコーデ。フリルのスカートと見せかけてズボンだから、強風に吹かれても安心！
+            </p>
+          </div>
+    
+          <div class="outfit-card">
+            <p class="outfit-day">2日目</p>
+            <img src="/outfit-day2.png" alt="2日目のコーディネイト">
+            <p class="outfit-text">
+              今日は水族館に行くため、涼しめお出かけコーデ。強い日差しには日傘を装備して、移動中も沖縄らしく。
+            </p>
+          </div>
+    
+          <div class="outfit-card">
+            <p class="outfit-day">3日目</p>
+            <img src="/outfit-day3.png" alt="3日目のコーディネイト">
+            <p class="outfit-text">
+              着替えもあるから脱ぎ着がしやすいようにお揃いのTシャツでゆるっとコーデ。
+            </p>
+          </div>
+    
+          <div class="outfit-card">
+            <p class="outfit-day">4日目</p>
+            <img src="/outfit-day4.png" alt="4日目のコーディネイト">
+            <p class="outfit-text">
+              アメリカンヴィレッジで購入したかりゆしウェアを早速着用。ズボンの色味も合わせてお揃いコーデ。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="movie-section">
+      <div class="movie-inner">
+        <h2>Movie Collection</h2>
+        <p class="movie-sub">
+          沖縄で撮影した思い出動画たち
+        </p>
+    
+        <div class="movie-grid">
+          <div class="movie-card">
+            <iframe
+              src="https://www.youtube.com/embed/LJQXemy-cVY"
+              title="海亀"
+              allowfullscreen
+            ></iframe>
+            <h3>海亀</h3>
+            <p>ゆったり泳ぐ姿に癒された。</p>
+          </div>
+        
+          <div class="movie-card">
+            <iframe
+              src="https://www.youtube.com/embed/fJHoVNpcNRk"
+              title="ジンベエザメ（近距離）"
+              allowfullscreen
+            ></iframe>
+            <h3>ジンベエザメ（近距離）</h3>
+            <p>目の前を通る迫力がすごかった！</p>
+          </div>
+        
+          <div class="movie-card">
+            <iframe
+              src="https://www.youtube.com/embed/SYnqJAszNkg"
+              title="ジンベエザメ（水槽全景）"
+              allowfullscreen
+            ></iframe>
+            <h3>ジンベエザメ（水槽全景）</h3>
+            <p>幻想的な空間でずっと見ていられた。</p>
+          </div>
+        
+          <div class="movie-card">
+            <iframe
+              src="https://www.youtube.com/embed/ML8ZmfwEPfI"
+              title="恐竜バンド"
+              allowfullscreen
+            ></iframe>
+            <h3>恐竜バンド</h3>
+            <p>突然始まるショー感が可愛かった！</p>
+          </div>
+        
+          <div class="movie-card">
+            <iframe
+              src="https://www.youtube.com/embed/ejM9mRLjBUc"
+              title="P-REX"
+              allowfullscreen
+            ></iframe>
+            <h3>P-REX</h3>
+            <p>恐竜好きにはたまらない！</p>
+          </div>
+        
+          <div class="movie-card">
+            <iframe
+              src="https://www.youtube.com/embed/XEqaunCXh9c"
+              title="コウモリ"
+              allowfullscreen
+            ></iframe>
+            <h3>コウモリ</h3>
+            <p>羽ばたいている姿を間近で見れた。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sunset-section">
+      <video
+        autoplay
+        muted
+        loop
+        playsinline
+        class="sunset-video"
+      >
+        <source src="/sunset.mp4" type="video/mp4" />
+      </video>
+    </section>
+    
+    <section class="ending-message">
+      <p>
+        おそらく一生に一度の新婚旅行。<br>
+        沖縄本土を隅から隅まで時間の許す限り楽しんだ4日間。<br><br>
+    
+        素敵な場所で大好きな人と過ごした、あっという間の時間。<br>
+        「次来た時は〜」「次来た時も〜」という言葉通り、<br>
+        また来ることができることを願って。<br><br>
+    
+        そして、他の地域への旅行も、引き続き持ち物や服装にこだわって、<br>
+        悔いのないよう楽しんでいけたらと思います。<br><br>
+    
+        最後までお付き合いいただきましてありがとうございました。
+      </p>
+    </section>
+
+    <a href="#hero" class="back-to-top">
+      TOPへ戻る
+    </a>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
