@@ -621,3 +621,15 @@ html {
   transform: translateY(-4px);
   background: rgba(255, 255, 255, 0.92);
 }
+
+
+
+
+.movie-section,
+.sunset-section,
+.ending-message,
+.back-to-top {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
