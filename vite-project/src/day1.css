@@ -1,742 +1,785 @@
 /* ===== DAY1ページ全体 ===== */
 
-    
+
 .day1-scrap {
-    min-height: 100vh;
-    background: #dfeff0;
-    color: #3d3328;
-    padding: 42px 56px 120px;
-    box-sizing: border-box;
-    letter-spacing: 0.1em;
+  min-height: 100vh;
+  background: #dfeff0;
+  color: #3d3328;
+  padding: 42px 56px 120px;
+  box-sizing: border-box;
+  letter-spacing: 0.1em;
 }
-    
+
 .day1-scrap img {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
-    
+
 /* ===== 上部3カラム ===== */
 .day1-header {
-    max-width: 1180px;
-    margin: 0 auto 34px;
-    display: grid;
-    grid-template-columns: 260px 1fr 285px;
-    gap: 34px;
-    align-items: start;
+  max-width: 1180px;
+  margin: 0 auto 34px;
+  display: grid;
+  grid-template-columns: 260px 1fr 285px;
+  gap: 34px;
+  align-items: start;
 }
-    
+
 /* ===== 左カラム：タイトル・HOME・地図 ===== */
 .header-left {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
-    
+
 .title-art {
-    width: 250px;
-    display: block;
+  width: 250px;
+  display: block;
 }
-    
-  .top-link {
-    position: relative;
-    z-index: 100;
-    pointer-events: auto;
-    top: -50px;
-    color: #244f43;
-    font-size: 14px;
-    font-weight: 700;
-    text-decoration: none;
-    border-bottom: 1px solid #244f43;
-    width: fit-content;
+
+.top-link {
+  position: relative;
+  z-index: 100;
+  pointer-events: auto;
+  top: -50px;
+  color: #244f43;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px solid #244f43;
+  width: fit-content;
 }
-    
+
 .header-left .map-wrapper {
-    position: relative;
-    width: 400px;
-    margin-top: -70px;
+  position: relative;
+  width: 400px;
+  margin-top: -70px;
 }
-    
+
 .header-left .okinawa-map {
-    width: 100%;
-    display: block;
-    opacity: 0.95;
+  width: 100%;
+  display: block;
+  opacity: 0.95;
 }
-    
+
 .header-left .marker-group {
-    position: absolute;
-    transform: translate(-160%, -50%);
-    opacity: 0.45;
-    transition: 0.25s ease;
+  position: absolute;
+  transform: translate(-160%, -50%);
+  opacity: 0.45;
+  transition: 0.25s ease;
 }
-    
+
 .header-left .map-marker {
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    display: block;
-    background: #4da3df;
-    box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.6);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: block;
+  background: #4da3df;
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.6);
 }
-    
-  /* 地図ポイント位置 */
-.m-1015 { top: 80%; left: 28%; }
-.m-1200 { top: 26%; left: 74%; }
-.m-1330 { top: 10%; left: 83%; }
-.m-1400 { top: 12%; left: 89%; }
-.m-1500 { top: 26%; left: 87%; }
-.m-1730 { top: 30%; left: 53%; }
-.m-1900 { top: 30%; left: 60%; }
-.m-2030 { top: 28%; left: 59%; }
-.m-2100 { top: 30%; left: 53%; }
-    
+
+/* 地図ポイント位置 */
+.m-1015 {
+  top: 80%;
+  left: 28%;
+}
+
+.m-1200 {
+  top: 26%;
+  left: 74%;
+}
+
+.m-1330 {
+  top: 10%;
+  left: 83%;
+}
+
+.m-1400 {
+  top: 12%;
+  left: 89%;
+}
+
+.m-1500 {
+  top: 26%;
+  left: 87%;
+}
+
+.m-1730 {
+  top: 30%;
+  left: 53%;
+}
+
+.m-1900 {
+  top: 30%;
+  left: 60%;
+}
+
+.m-2030 {
+  top: 28%;
+  left: 59%;
+}
+
+.m-2100 {
+  top: 30%;
+  left: 53%;
+}
+
 .marker-group.is-active {
-    opacity: 1;
-    transform: translate(-160%, -50%) scale(1.6);
+  opacity: 1;
+  transform: translate(-160%, -50%) scale(1.6);
 }
-    
+
 .marker-group.is-active .map-marker {
-    animation: pulseMarker 1.8s infinite;
-    box-shadow:
+  animation: pulseMarker 1.8s infinite;
+  box-shadow:
     0 0 0 6px rgba(255, 255, 255, 0.8),
     0 0 18px rgba(77, 163, 223, 0.95);
 }
-    
+
 @keyframes pulseMarker {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.25); }
-    100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.25);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
-    
+
 /* ===== 中央カラム：吹き出し・スケジュール ===== */
 .header-main {
-    position: relative;
-    min-height: 320px;
+  position: relative;
+  min-height: 320px;
 }
-    
+
 .intro-area {
-    position: relative;
-    height: 130px;
+  position: relative;
+  height: 130px;
 }
-    
+
 .intro-kuina {
-    position: absolute;
-    left: -60px;
-    top: 10px;
-    width: 90px;
-    height: auto;
-    object-fit: contain;
-    transition: transform 0.35s ease, filter 0.35s ease;
+  position: absolute;
+  left: -60px;
+  top: 10px;
+  width: 90px;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.35s ease, filter 0.35s ease;
 }
-    
+
 .intro-kuina:hover {
-    transform: rotate(-8deg) scale(1.08);
+  transform: rotate(-8deg) scale(1.08);
 }
-    
+
 .speech-bubble {
-    position: absolute;
-    left: 10px;
-    top: 8px;
-    width: 430px;
-    padding: 26px 34px;
-    text-align: center;
-    font-size: 14px;
-    line-height: 1.8;
-    font-weight: 700;
-    color: #5a4b3b;
-    background: rgba(255, 255, 255, 0.55);
-    border: 4px solid rgba(255, 255, 255, 0.85);
-    border-radius: 50%;
+  position: absolute;
+  left: 10px;
+  top: 8px;
+  width: 430px;
+  padding: 26px 34px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.8;
+  font-weight: 700;
+  color: #5a4b3b;
+  background: rgba(255, 255, 255, 0.55);
+  border: 4px solid rgba(255, 255, 255, 0.85);
+  border-radius: 50%;
 }
-    
+
 .day1-schedule {
-    margin-left: 200px;
-    margin-top: 60px;
+  margin-left: 200px;
+  margin-top: 60px;
 }
-    
+
 .day1-schedule a {
-    display: block;
-    position: relative;
-    margin: 0 0 12px;
-    font-size: 16px;
-    line-height: 1.6;
-    font-weight: 700;
-    color: #3d3328;
-    text-decoration: none;
-    cursor: pointer;
-    transition: 0.25s ease;
+  display: block;
+  position: relative;
+  margin: 0 0 12px;
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 700;
+  color: #3d3328;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.25s ease;
 }
-    
+
 .day1-schedule a:hover {
-    transform: translateX(6px);
-    color: #56d138;
+  transform: translateX(6px);
+  color: #56d138;
 }
-    
+
 .day1-schedule a::after {
-    content: "";
-    position: absolute;
-    left: -12px;
-    top: 50%;
-    width: 0;
-    height: 2px;
-    background: #56d138;
-    transition: 0.3s ease;
+  content: "";
+  position: absolute;
+  left: -12px;
+  top: 50%;
+  width: 0;
+  height: 2px;
+  background: #56d138;
+  transition: 0.3s ease;
 }
-    
+
 .day1-schedule a:hover::after {
-    width: 8px;
+  width: 8px;
 }
-    
+
 /* ===== 右カラム：今日のコーデ ===== */
 .day1-scrap .outfit-card {
-    position: relative;
-    background: #e7f8fb;
-    width: 285px;
-    height: 420px;
-    min-height: 420px;
-    padding: 18px 18px 22px;
-    overflow: visible;
-    transform: rotate(-1.5deg);
-    box-shadow:
+  position: relative;
+  background: #e7f8fb;
+  width: 285px;
+  height: 420px;
+  min-height: 420px;
+  padding: 18px 18px 22px;
+  overflow: visible;
+  transform: rotate(-1.5deg);
+  box-shadow:
     0 18px 40px rgba(0, 0, 0, 0.12),
     0 4px 10px rgba(0, 0, 0, 0.08);
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
-    
+
 .day1-scrap .outfit-card:hover {
-    transform: translateY(-8px) rotate(-2deg);
-    box-shadow:
+  transform: translateY(-8px) rotate(-2deg);
+  box-shadow:
     0 28px 55px rgba(0, 0, 0, 0.18),
     0 10px 22px rgba(0, 0, 0, 0.12);
 }
-    
-.day1-scrap .outfit-card h2 {
-    margin: 0 0 12px;
-    text-align: center;
-    color: #6a4c35;
-    font-size: 17px;
-    border-bottom: 2px solid #b99d75;
-    padding-bottom: 7px;
-    position: relative;
-    z-index: 4;
-}
-    
-  .day1-scrap .uv-parker {
-    position: absolute;
-    left: 20px;
-    top: 82px;
-    width: 200px;
-    height: auto;
-    max-width: none;
-    max-height: none;
-    object-fit: contain;
-    opacity: 0.42;
-    transform: none;
-    z-index: 1;
-  }
-    
-  .day1-scrap .outfit-card > img:not(.uv-parker) {
-    position: absolute;
-    right: -130px;
-    top: 20px;
-    left: auto;
-    width: 470px;
-    height: auto;
-    max-width: none;
-    max-height: none;
-    object-fit: contain;
-    display: block;
-    margin: 0;
-    transform: none;
-    z-index: 3;
-  }
-    
-  .day1-scrap .outfit-card p {
-    position: absolute;
-    left: 18px;
-    right: 18px;
-    bottom: 22px;
-    z-index: 4;
-    margin: 0;
-    font-size: 13px;
-    line-height: 1.75;
-    font-weight: 700;
-    color: #6a4c35;
-    background: rgba(255, 255, 255, 0.78);
-    padding: 6px 8px;
-    border-radius: 999px;
-  }
-    
-  /* ===== タイムライン共通 ===== */
-  .day1-timeline {
-    max-width: 1180px;
-    margin: 34px auto 0;
-    position: relative;
-  }
-    
-  .day1-timeline::before {
-    content: "";
-    position: absolute;
-    left: 16px;
-    top: 0;
-    bottom: 0;
-    width: 4px;
-    background: #244f43;
-  }
-    
-  .memory-block {
-    position: relative;
-    display: grid;
-    grid-template-columns: 82px 1fr;
-    gap: 28px;
-    margin-bottom: 44px;
-  }
-    
-  .memory-block::before {
-    content: "";
-    position: absolute;
-    left: 6.5px;
-    top: 0;
-    width: 23px;
-    height: 23px;
-    border-radius: 50%;
-    background: #244f43;
-    z-index: 2;
-  }
-    
-  .memory-block > .time {
-    margin-left: 36px;
-    width: fit-content;
-    height: fit-content;
-    background: #244f43;
-    color: #fff;
-    padding: 6px 12px;
-    font-size: 17px;
-    font-weight: 700;
-    line-height: 1.2;
-    border-radius: 2px;
-  }
-    
-  .memory-main {
-    position: relative;
-    padding-top: 12px;
-    z-index: 1;
-  }
-  
-  /* 薄茶ラインを別レイヤー化 */
-  .memory-main::before {
-    content: "";
-  
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-  
-    height: 2px;
-    background: #c7aa80;
-  
-    z-index: 0;
-  }
-  
-    
-  .memory-main h2 {
-    margin: 0 0 14px 20px;
-    font-size: 23px;
-    color: #3d3328;
-    letter-spacing: 0.1em;
-  }
-    
-  .memory-main p {
-    margin: 14px 0 0;
-    font-size: 15px;
-    line-height: 2;
-    font-weight: 700;
-  }
 
-    
-  .photos img:not(.swim-set),
-  .airport-photo,
-  .single-img,
-  .wild-kuina-photo,
-  .view-card img,
-  .yuiyui-photos img,
-  .turtle-card img {
-    position: relative;
-    z-index: 1;
-    cursor: pointer;
-    transition:
+.day1-scrap .outfit-card h2 {
+  margin: 0 0 12px;
+  text-align: center;
+  color: #6a4c35;
+  font-size: 17px;
+  border-bottom: 2px solid #b99d75;
+  padding-bottom: 7px;
+  position: relative;
+  z-index: 4;
+}
+
+.day1-scrap .uv-parker {
+  position: absolute;
+  left: 20px;
+  top: 82px;
+  width: 200px;
+  height: auto;
+  max-width: none;
+  max-height: none;
+  object-fit: contain;
+  opacity: 0.42;
+  transform: none;
+  z-index: 1;
+}
+
+.day1-scrap .outfit-card>img:not(.uv-parker) {
+  position: absolute;
+  right: -130px;
+  top: 20px;
+  left: auto;
+  width: 470px;
+  height: auto;
+  max-width: none;
+  max-height: none;
+  object-fit: contain;
+  display: block;
+  margin: 0;
+  transform: none;
+  z-index: 3;
+}
+
+.day1-scrap .outfit-card p {
+  position: absolute;
+  left: 18px;
+  right: 18px;
+  bottom: 22px;
+  z-index: 4;
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.75;
+  font-weight: 700;
+  color: #6a4c35;
+  background: rgba(255, 255, 255, 0.78);
+  padding: 6px 8px;
+  border-radius: 999px;
+}
+
+/* ===== タイムライン共通 ===== */
+.day1-timeline {
+  max-width: 1180px;
+  margin: 34px auto 0;
+  position: relative;
+}
+
+.day1-timeline::before {
+  content: "";
+  position: absolute;
+  left: 16px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #244f43;
+}
+
+.memory-block {
+  position: relative;
+  display: grid;
+  grid-template-columns: 82px 1fr;
+  gap: 28px;
+  margin-bottom: 44px;
+}
+
+.memory-block::before {
+  content: "";
+  position: absolute;
+  left: 6.5px;
+  top: 0;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  background: #244f43;
+  z-index: 2;
+}
+
+.memory-block>.time {
+  margin-left: 36px;
+  width: fit-content;
+  height: fit-content;
+  background: #244f43;
+  color: #fff;
+  padding: 6px 12px;
+  font-size: 17px;
+  font-weight: 700;
+  line-height: 1.2;
+  border-radius: 2px;
+}
+
+.memory-main {
+  position: relative;
+  padding-top: 12px;
+  z-index: 1;
+}
+
+/* 薄茶ラインを別レイヤー化 */
+.memory-main::before {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+
+  height: 2px;
+  background: #c7aa80;
+
+  z-index: 0;
+}
+
+
+.memory-main h2 {
+  margin: 0 0 14px 20px;
+  font-size: 23px;
+  color: #3d3328;
+  letter-spacing: 0.1em;
+}
+
+.memory-main p {
+  margin: 14px 0 0;
+  font-size: 15px;
+  line-height: 2;
+  font-weight: 700;
+}
+
+
+.photos img:not(.swim-set),
+.airport-photo,
+.single-img,
+.wild-kuina-photo,
+.view-card img,
+.yuiyui-photos img,
+.turtle-card img {
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  transition:
     transform 0.35s ease,
     box-shadow 0.35s ease,
     filter 0.35s ease;
-  }
-    
-  .photos img:not(.swim-set):hover,
-  .airport-photo:hover,
-  .single-img:hover,
-  .wild-kuina-photo:hover,
-  .view-card img:hover,
-  .yuiyui-photos img:hover,
-  .turtle-card img:hover {
-    transform: scale(1.08);
-    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.22);
-    filter: brightness(1.05);
-    z-index: 30;
-  }
-    
-  /* ===== 10:15 那覇空港 ===== */
-  .airport-memory-layout {
-    display: grid;
-    grid-template-columns: 260px 1fr;
-    gap: 46px;
-    align-items: center;
-  }
-    
-  .airport-memory .airport-photo {
-    width: 260px;
-    height: 190px;
-    object-fit: cover;
-    display: block;
-  }
-    
-  .airport-memory .airport-deco {
-    position: relative;
-    height: 170px;
-  }
-    
-  .airport-memory .plane-art {
-    position: absolute;
-    left: -40px;
-    top: -160px;
-    width: 340px;
-    max-width: none;
-    transform: rotate(-8deg);
-    transition: transform 0.35s ease, filter 0.35s ease;
-  }
-    
-  .airport-memory .plane-art:hover {
-    transform: rotate(-14deg) scale(1.06);
-  }
-    
-  .airport-memory .shirt-art {
-    position: absolute;
-    left: 200px;
-    top: -10px;
-    width: 230px;
-    max-width: none;
-    transform: rotate(8deg);
-    transition: transform 0.35s ease, filter 0.35s ease;
-  }
-    
-  .airport-memory .shirt-art:hover {
-    transform: rotate(14deg) scale(1.06);
-  }
-    
-  .airport-memory p {
-    margin-top: 18px;
-  }
-    
-  /* ===== 12:00 ゆいゆい国頭 ===== */
-  .yuiyui-layout {
-    position: relative;
-    padding-right: 300px;
-    min-height: 340px;
-  }
-    
-  .yuiyui-photos {
-    display: flex;
-    gap: 12px;
-    align-items: flex-end;
-  }
-    
-  .andagi-art {
-    position: absolute;
-    right: 60px;
-    top: 150px;
-    width: 200px;
-    height: auto;
-    transition: transform 0.35s ease, filter 0.35s ease;
-  }
-    
-  .andagi-art:hover {
-    transform: rotate(10deg) scale(1.08);
-  }
-    
-  .turtle-card {
-    position: absolute;
-    right: 0;
-    top: -300px;
-    width: 300px;
-    background: rgb(185, 233, 141);
-    padding: 28px 22px;
-    box-sizing: border-box;
-  }
-    
-  .turtle-card img {
-    width: 250px;
-    height: 190px;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto 20px;
-  }
-    
-  .turtle-card p {
-    margin: 8px 0;
-    text-align: center;
-    font-size: 14px;
-    line-height: 1.8;
-  }
-    
-  /* ===== 13:30 辺戸岬 ===== */
-  .hedo-sign-deco {
-    position: absolute;
-    right: -40px;
-    top: -150px;
-    width: 120px;
-    height: auto;
-    transform: rotate(10deg);
-    z-index: 3;
-    transition: transform 0.35s ease, filter 0.35s ease;
-  }
-    
-  .hedo-sign-deco:hover {
-    transform: rotate(18deg) scale(1.08);
-  }
-    
-  /* ===== 右側メモ・装飾 ===== */
-  .with-note {
-    padding-right: 260px;
-    min-height: 260px;
-  }
-    
-  .deco {
-    position: absolute;
-    object-fit: contain;
-    pointer-events: none;
-  }
-    
-  .kuina {
-    width: 120px;
-    right: 20px;
-    top: -20px;
-    transform: rotate(-4deg);
-  }
-    
-  .mini-note {
-    position: absolute;
-    right: 0;
-    top: 120px;
-    width: 200px;
-    background: rgb(185, 233, 141);
-    padding: 18px;
-    box-sizing: border-box;
-  }
-    
-  .mini-note img {
-    width: 90px;
-    display: block;
-    margin: 0 auto 10px;
-  }
-    
-  .mini-note p {
-    font-size: 12px;
-    line-height: 1.8;
-    margin: 0;
-  }
-    
-  /* ===== aside共通：立体感 ===== */
-    .turtle-card,
-    .view-card,
-    .wild-kuina-card,
-    .mini-note {
-    border-radius: 6px;
-    box-shadow:
+}
+
+.photos img:not(.swim-set):hover,
+.airport-photo:hover,
+.single-img:hover,
+.wild-kuina-photo:hover,
+.view-card img:hover,
+.yuiyui-photos img:hover,
+.turtle-card img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.22);
+  filter: brightness(1.05);
+  z-index: 30;
+}
+
+/* ===== 10:15 那覇空港 ===== */
+.airport-memory-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 46px;
+  align-items: center;
+}
+
+.airport-memory .airport-photo {
+  width: 260px;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+}
+
+.airport-memory .airport-deco {
+  position: relative;
+  height: 170px;
+}
+
+.airport-memory .plane-art {
+  position: absolute;
+  left: -40px;
+  top: -160px;
+  width: 340px;
+  max-width: none;
+  transform: rotate(-8deg);
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.airport-memory .plane-art:hover {
+  transform: rotate(-14deg) scale(1.06);
+}
+
+.airport-memory .shirt-art {
+  position: absolute;
+  left: 200px;
+  top: -10px;
+  width: 230px;
+  max-width: none;
+  transform: rotate(8deg);
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.airport-memory .shirt-art:hover {
+  transform: rotate(14deg) scale(1.06);
+}
+
+.airport-memory p {
+  margin-top: 18px;
+}
+
+/* ===== 12:00 ゆいゆい国頭 ===== */
+.yuiyui-layout {
+  position: relative;
+  padding-right: 300px;
+  min-height: 340px;
+}
+
+.yuiyui-photos {
+  display: flex;
+  gap: 12px;
+  align-items: flex-end;
+}
+
+.andagi-art {
+  position: absolute;
+  right: 60px;
+  top: 150px;
+  width: 200px;
+  height: auto;
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.andagi-art:hover {
+  transform: rotate(10deg) scale(1.08);
+}
+
+.turtle-card {
+  position: absolute;
+  right: 0;
+  top: -300px;
+  width: 300px;
+  background: rgb(185, 233, 141);
+  padding: 28px 22px;
+  box-sizing: border-box;
+}
+
+.turtle-card img {
+  width: 250px;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.turtle-card p {
+  margin: 8px 0;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+/* ===== 13:30 辺戸岬 ===== */
+.hedo-sign-deco {
+  position: absolute;
+  right: -40px;
+  top: -150px;
+  width: 120px;
+  height: auto;
+  transform: rotate(10deg);
+  z-index: 3;
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.hedo-sign-deco:hover {
+  transform: rotate(18deg) scale(1.08);
+}
+
+/* ===== 右側メモ・装飾 ===== */
+.with-note {
+  padding-right: 260px;
+  min-height: 260px;
+}
+
+.deco {
+  position: absolute;
+  object-fit: contain;
+  pointer-events: none;
+}
+
+.kuina {
+  width: 120px;
+  right: 20px;
+  top: -20px;
+  transform: rotate(-4deg);
+}
+
+.mini-note {
+  position: absolute;
+  right: 0;
+  top: 120px;
+  width: 200px;
+  background: rgb(185, 233, 141);
+  padding: 18px;
+  box-sizing: border-box;
+}
+
+.mini-note img {
+  width: 90px;
+  display: block;
+  margin: 0 auto 10px;
+}
+
+.mini-note p {
+  font-size: 12px;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* ===== aside共通：立体感 ===== */
+.turtle-card,
+.view-card,
+.wild-kuina-card,
+.mini-note {
+  border-radius: 6px;
+  box-shadow:
     0 14px 28px rgba(0, 0, 0, 0.12),
     0 4px 10px rgba(0, 0, 0, 0.08);
-    transition: transform 0.35s ease, box-shadow 0.35s ease;
-  }
-    
-  .turtle-card:hover,
-  .view-card:hover,
-  .wild-kuina-card:hover,
-  .mini-note:hover {
-    transform: translateY(-6px) rotate(-1deg);
-    box-shadow:
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.turtle-card:hover,
+.view-card:hover,
+.wild-kuina-card:hover,
+.mini-note:hover {
+  transform: translateY(-6px) rotate(-1deg);
+  box-shadow:
     0 22px 40px rgba(0, 0, 0, 0.18),
     0 10px 20px rgba(0, 0, 0, 0.10);
-  }
-    
-  /* マスキングテープ */
-  .turtle-card::before,
-  .view-card::before,
-  .wild-kuina-card::before,
-  .outfit-card::after {
-    content: "";
-    position: absolute;
-    width: 90px;
-    height: 20px;
-    background: rgba(255, 220, 230, 0.72);
-    top: -10px;
-    left: 50%;
-    transform: translateX(-50%) rotate(-6deg);
-    z-index: 20;
-  }
-    
-  /* ===== 14:00 展望台カード ===== */
-  .view-card {
-    position: absolute;
-    right: -50px;
-    top: 20px;
-    width: 280px;
-    background: rgb(185, 233, 141);
-    padding: 26px 24px;
-    box-sizing: border-box;
-    z-index: 50;
-  }
-    
-  .view-card-item + .view-card-item {
-    margin-top: 22px;
-  }
-    
-  .view-card img {
-    width: 200px;
-    height: 160px;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto 8px;
-  }
-    
-  .view-card p {
-    margin: 0;
-    text-align: center;
-    font-size: 13px;
-    line-height: 1.7;
-    font-weight: 700;
-  }
-    
-  /* ===== 19:00 野生ヤンバルクイナカード ===== */
-  .wild-kuina-card {
-    position: absolute;
-    right: -50px;
-    top: 400px;
-    width: 320px;
-    background: rgb(185, 233, 141);
-    padding: 28px 24px;
-    box-sizing: border-box;
-    z-index: 50;
-  }
-    
-  .wild-kuina-card p {
-    margin: 0 0 18px;
-    font-size: 15px;
-    line-height: 2;
-    font-weight: 700;
-    color: #6a4c35;
-  }
-    
-  .eyes-art {
-    width: 46px;
-    height: auto;
-    vertical-align: middle;
-    margin-left: 4px;
-  }
-    
-  .wild-photo-wrap {
-    position: relative;
-    width: 260px;
-    margin: 0 auto;
-  }
-    
-  .wild-kuina-photo {
-    width: 260px;
-    height: 190px;
-    object-fit: cover;
-    display: block;
-  }
-    
-  .attention-art {
-    position: absolute;
-    left: 100px;
-    top: 90px;
-    width: 90px;
-    height: auto;
-    pointer-events: none;
-  }
-    
-  /* ===== 20:30・21:00 ===== */
-  .single-img {
-    width: 230px;
-    height: 145px;
-    object-fit: cover;
-    display: block;
-    margin: 8px auto 12px;
-  }
-    
-  .pool-photos {
-    position: relative;
-  }
-    
-  .swim-set {
-    position: absolute;
-    right: 1px;
-    bottom: -40px;
-    width: 330px;
-    height: auto;
-    z-index: 3;
-    transition: transform 0.35s ease, filter 0.35s ease;
-  }
-    
-  .swim-set:hover {
-    transform: rotate(2deg) scale(1.03);
-  }
-    
-  /* ===== ページ右下 ===== */
-  .day1-end {
-    position: relative;
-    height: 260px;
-  }
-    
-  .honoka-cutout {
-    position: absolute;
-    right: 40px;
-    bottom: 0;
-    width: 180px;
-    height: auto;
-    transition: transform 0.4s ease, filter 0.4s ease;
-  }
-    
-  .honoka-cutout:hover {
-    transform: translateY(-6px) rotate(-4deg) scale(1.05);
-    filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.18));
-  }
-    
-  .back-top-link {
-    position: absolute;
-    right: 200px;
-    bottom: 12px;
-    color: #6a4c35;
-    font-size: 13px;
-    font-weight: 700;
-    text-decoration: none;
-  }
-    
-  
-  
-  /* cardを持っている予定ブロック自体を、次の予定ブロックより前面に出す */
-  .memory-block {
-    z-index: 1;
-  }
-  
-  .memory-block.has-view-card,
-  .memory-block.has-wild-card {
-    z-index: 50;
-  }
-  
-  /* card本体も前面 */
-  .has-view-card .view-card,
-  .has-wild-card .wild-kuina-card {
-    z-index: 100;
-  }
-  
-  
+}
+
+/* マスキングテープ */
+.turtle-card::before,
+.view-card::before,
+.wild-kuina-card::before,
+.outfit-card::after {
+  content: "";
+  position: absolute;
+  width: 90px;
+  height: 20px;
+  background: rgba(255, 220, 230, 0.72);
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-6deg);
+  z-index: 20;
+}
+
+/* ===== 14:00 展望台カード ===== */
+.view-card {
+  position: absolute;
+  right: -50px;
+  top: 20px;
+  width: 280px;
+  background: rgb(185, 233, 141);
+  padding: 26px 24px;
+  box-sizing: border-box;
+  z-index: 50;
+}
+
+.view-card-item+.view-card-item {
+  margin-top: 22px;
+}
+
+.view-card img {
+  width: 200px;
+  height: 160px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 8px;
+}
+
+.view-card p {
+  margin: 0;
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.7;
+  font-weight: 700;
+}
+
+/* ===== 19:00 野生ヤンバルクイナカード ===== */
+.wild-kuina-card {
+  position: absolute;
+  right: -50px;
+  top: 400px;
+  width: 320px;
+  background: rgb(185, 233, 141);
+  padding: 28px 24px;
+  box-sizing: border-box;
+  z-index: 50;
+}
+
+.wild-kuina-card p {
+  margin: 0 0 18px;
+  font-size: 15px;
+  line-height: 2;
+  font-weight: 700;
+  color: #6a4c35;
+}
+
+.eyes-art {
+  width: 46px;
+  height: auto;
+  vertical-align: middle;
+  margin-left: 4px;
+}
+
+.wild-photo-wrap {
+  position: relative;
+  width: 260px;
+  margin: 0 auto;
+}
+
+.wild-kuina-photo {
+  width: 260px;
+  height: 190px;
+  object-fit: cover;
+  display: block;
+}
+
+.attention-art {
+  position: absolute;
+  left: 100px;
+  top: 90px;
+  width: 90px;
+  height: auto;
+  pointer-events: none;
+}
+
+/* ===== 20:30・21:00 ===== */
+.single-img {
+  width: 230px;
+  height: 145px;
+  object-fit: cover;
+  display: block;
+  margin: 8px auto 12px;
+}
+
+.pool-photos {
+  position: relative;
+}
+
+.swim-set {
+  position: absolute;
+  right: 1px;
+  bottom: -40px;
+  width: 330px;
+  height: auto;
+  z-index: 3;
+  transition: transform 0.35s ease, filter 0.35s ease;
+}
+
+.swim-set:hover {
+  transform: rotate(2deg) scale(1.03);
+}
+
+/* ===== ページ右下 ===== */
+.day1-end {
+  position: relative;
+  height: 260px;
+}
+
+.honoka-cutout {
+  position: absolute;
+  right: 40px;
+  bottom: 0;
+  width: 180px;
+  height: auto;
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.honoka-cutout:hover {
+  transform: translateY(-6px) rotate(-4deg) scale(1.05);
+  filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.18));
+}
+
+.back-top-link {
+  position: absolute;
+  right: 200px;
+  bottom: 12px;
+  color: #6a4c35;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+
+
+/* cardを持っている予定ブロック自体を、次の予定ブロックより前面に出す */
+.memory-block {
+  z-index: 1;
+}
+
+.memory-block.has-view-card,
+.memory-block.has-wild-card {
+  z-index: 50;
+}
+
+/* card本体も前面 */
+.has-view-card .view-card,
+.has-wild-card .wild-kuina-card {
+  z-index: 100;
+}
+
+
 
 
 
@@ -834,7 +877,7 @@
     transform: none;
   }
 
-  .day1-scrap .outfit-card > img:not(.uv-parker) {
+  .day1-scrap .outfit-card>img:not(.uv-parker) {
     position: relative;
     right: auto;
     top: auto;
@@ -882,7 +925,7 @@
     height: 22px;
   }
 
-  .memory-block > .time {
+  .memory-block>.time {
     margin-left: 14px;
     margin-bottom: 12px;
     font-size: 15px;
@@ -983,7 +1026,7 @@
     z-index: 1;
   }
 
-  .view-card-item + .view-card-item {
+  .view-card-item+.view-card-item {
     margin-top: 18px;
   }
 

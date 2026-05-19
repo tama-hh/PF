@@ -7,11 +7,11 @@
     box-sizing: border-box;
     letter-spacing: 0.08em;
 }
-    
+
 .day2-scrap img {
     box-sizing: border-box;
 }
-    
+
 /* ===== 上部3カラム ===== */
 .day2-header {
     max-width: 1180px;
@@ -21,7 +21,7 @@
     gap: 34px;
     align-items: start;
 }
-    
+
 /* ===== 左カラム ===== */
 .header-left {
     position: relative;
@@ -29,12 +29,12 @@
     flex-direction: column;
     gap: 2px;
 }
-    
+
 .title-art {
     width: 250px;
     display: block;
 }
-    
+
 .top-link {
     position: relative;
     z-index: 100;
@@ -47,75 +47,114 @@
     border-bottom: 1px solid #bf5f15;
     width: fit-content;
 }
-    
+
 /* ===== 地図 ===== */
 .header-left .map-wrapper {
     position: relative;
     width: 400px;
     margin-top: -70px;
 }
-    
+
 .header-left .okinawa-map {
     width: 100%;
     display: block;
     opacity: 0.95;
 }
-    
+
 .header-left .marker-group {
     position: absolute;
     transform: translate(-160%, -50%);
     opacity: 0.45;
     transition: 0.25s ease;
 }
-    
+
 .header-left .map-marker {
-width: 14px;
+    width: 14px;
     height: 14px;
     border-radius: 50%;
     display: block;
     background: #c86518;
     box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.65);
 }
-    
+
 /* DAY2地図ポイント位置 */
-.m-0930 { top: 30%; left: 53%; }
-.m-1100 { top: 28%; left: 50%; }
-.m-1400 { top: 32%; left: 51%; }
-.m-1500 { top: 37%; left: 60%; }
-.m-1700 { top: 50%; left: 44%; }
-.m-1745 { top: 50%; left: 44%; }
-.m-1900 { top: 49%; left: 43%; }
-.m-2020 { top: 50%; left: 44%; }
-    
+.m-0930 {
+    top: 30%;
+    left: 53%;
+}
+
+.m-1100 {
+    top: 28%;
+    left: 50%;
+}
+
+.m-1400 {
+    top: 32%;
+    left: 51%;
+}
+
+.m-1500 {
+    top: 37%;
+    left: 60%;
+}
+
+.m-1700 {
+    top: 50%;
+    left: 44%;
+}
+
+.m-1745 {
+    top: 50%;
+    left: 44%;
+}
+
+.m-1900 {
+    top: 49%;
+    left: 43%;
+}
+
+.m-2020 {
+    top: 50%;
+    left: 44%;
+}
+
 .marker-group.is-active {
     opacity: 1;
     transform: translate(-160%, -50%) scale(1.6);
 }
-    
+
 .marker-group.is-active .map-marker {
     animation: pulseMarker 1.8s infinite;
     box-shadow:
-    0 0 0 6px rgba(255, 255, 255, 0.85),
-    0 0 18px rgba(200, 101, 24, 0.95);
+        0 0 0 6px rgba(255, 255, 255, 0.85),
+        0 0 18px rgba(200, 101, 24, 0.95);
 }
 
 @keyframes pulseMarker {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.25); }
-    100% { transform: scale(1); }
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.25);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
-    
+
 /* ===== 中央カラム ===== */
 .header-main {
     position: relative;
     min-height: 320px;
 }
-    
+
 .intro-area {
     position: relative;
     height: 130px;
 }
-    
+
 .intro-dino {
     position: absolute;
     left: -70px;
@@ -125,11 +164,11 @@ width: 14px;
     object-fit: contain;
     transition: transform 0.35s ease, filter 0.35s ease;
 }
-    
+
 .intro-dino:hover {
     transform: rotate(-6deg) scale(1.08);
 }
-    
+
 .speech-bubble {
     position: absolute;
     left: 40px;
@@ -145,12 +184,12 @@ width: 14px;
     border: 4px solid rgba(255, 255, 255, 0.85);
     border-radius: 50%;
 }
-    
+
 .day2-schedule {
     margin-left: 200px;
     margin-top: 52px;
 }
-    
+
 .day2-schedule a {
     display: block;
     position: relative;
@@ -163,12 +202,12 @@ width: 14px;
     cursor: pointer;
     transition: 0.25s ease;
 }
-    
+
 .day2-schedule a:hover {
     transform: translateX(6px);
     color: #c86518;
 }
-    
+
 .day2-schedule a::after {
     content: "";
     position: absolute;
@@ -179,11 +218,11 @@ width: 14px;
     background: #c86518;
     transition: 0.3s ease;
 }
-    
+
 .day2-schedule a:hover::after {
     width: 8px;
 }
-    
+
 /* ===== 今日のコーデ ===== */
 .day2-scrap .outfit-card {
     position: relative;
@@ -195,18 +234,18 @@ width: 14px;
     overflow: visible;
     transform: rotate(1.5deg);
     box-shadow:
-    0 18px 40px rgba(0, 0, 0, 0.12),
-    0 4px 10px rgba(0, 0, 0, 0.08);
+        0 18px 40px rgba(0, 0, 0, 0.12),
+        0 4px 10px rgba(0, 0, 0, 0.08);
     transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
-    
+
 .day2-scrap .outfit-card:hover {
     transform: translateY(-8px) rotate(2deg);
     box-shadow:
-    0 28px 55px rgba(0, 0, 0, 0.18),
-    0 10px 22px rgba(0, 0, 0, 0.12);
+        0 28px 55px rgba(0, 0, 0, 0.18),
+        0 10px 22px rgba(0, 0, 0, 0.12);
 }
-    
+
 .day2-scrap .outfit-card h2 {
     margin: 0 0 12px;
     text-align: center;
@@ -217,7 +256,7 @@ width: 14px;
     position: relative;
     z-index: 4;
 }
-    
+
 .day2-scrap .outfit-card .outfit-girl {
     position: absolute;
     right: -400px;
@@ -242,11 +281,11 @@ width: 14px;
     transform: rotate(-8deg);
     transition: transform 0.35s ease;
 }
-    
+
 .umbrella-art:hover {
     transform: rotate(-6deg) scale(1.05);
 }
-    
+
 .day2-scrap .outfit-card p {
     position: absolute;
     left: 18px;
@@ -262,14 +301,14 @@ width: 14px;
     padding: 8px 10px;
     border-radius: 14px;
 }
-    
+
 /* ===== タイムライン ===== */
 .day2-timeline {
     max-width: 1180px;
     margin: 34px auto 0;
     position: relative;
 }
-    
+
 .day2-timeline::before {
     content: "";
     position: absolute;
@@ -279,7 +318,7 @@ width: 14px;
     width: 4px;
     background: #c86518;
 }
-    
+
 .memory-block {
     position: relative;
     display: grid;
@@ -288,7 +327,7 @@ width: 14px;
     margin-bottom: 44px;
     z-index: 1;
 }
-    
+
 .memory-block::before {
     content: "";
     position: absolute;
@@ -300,8 +339,8 @@ width: 14px;
     background: #c86518;
     z-index: 2;
 }
-    
-.memory-block > .time {
+
+.memory-block>.time {
     margin-left: 36px;
     width: fit-content;
     height: fit-content;
@@ -315,13 +354,13 @@ width: 14px;
     position: relative;
     z-index: 10;
 }
-    
+
 .memory-main {
     position: relative;
     padding-top: 12px;
     z-index: 1;
 }
-    
+
 .memory-block::after {
     content: "";
     position: absolute;
@@ -332,21 +371,21 @@ width: 14px;
     background: #c9a85e;
     z-index: -1;
 }
-    
+
 .memory-main h2 {
     margin: 0 0 14px 20px;
     font-size: 23px;
     color: #4a3628;
     letter-spacing: 0.08em;
 }
-    
+
 .memory-main p {
     margin: 14px 0 0;
     font-size: 15px;
     line-height: 2;
     font-weight: 700;
 }
-    
+
 /* ===== 写真hover ===== */
 .day2-scrap .photos img,
 .day2-scrap .single-img,
@@ -355,11 +394,11 @@ width: 14px;
     z-index: 1;
     cursor: pointer;
     transition:
-    transform 0.35s ease,
-    box-shadow 0.35s ease,
-    filter 0.35s ease;
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        filter 0.35s ease;
 }
-    
+
 .day2-scrap .photos img:hover,
 .day2-scrap .single-img:hover,
 .day2-scrap video:hover {
@@ -368,12 +407,12 @@ width: 14px;
     filter: brightness(1.06) saturate(1.06);
     z-index: 30;
 }
-    
+
 /* ===== 09:30 プール ===== */
 .pool-morning {
     padding-right: 260px;
 }
-    
+
 .swimset-morning {
     position: absolute;
     right: 10px;
@@ -382,7 +421,7 @@ width: 14px;
     height: auto;
     transition: transform 0.35s ease;
 }
-    
+
 .swimset-morning:hover {
     transform: rotate(6deg) scale(1.06);
 }
@@ -432,12 +471,10 @@ width: 14px;
 
 .deco-fish:hover {
     transform:
-        translateY(-6px)
-        rotate(-6deg)
-        scale(1.08);
+        translateY(-6px) rotate(-6deg) scale(1.08);
 
     filter:
-        drop-shadow(0 10px 14px rgba(0,0,0,0.16));
+        drop-shadow(0 10px 14px rgba(0, 0, 0, 0.16));
 }
 
 /* ===== マナティー動画リンク ===== */
@@ -463,7 +500,7 @@ width: 14px;
     font-weight: 700;
     color: #5a4032;
     box-shadow:
-        0 8px 18px rgba(0,0,0,0.08);
+        0 8px 18px rgba(0, 0, 0, 0.08);
 }
 
 .manatee-links a {
@@ -515,7 +552,7 @@ width: 14px;
     padding-right: 300px;
     min-height: 300px;
 }
-    
+
 .starfish-deco {
     position: absolute;
     right: 300px;
@@ -524,11 +561,11 @@ width: 14px;
     height: auto;
     transition: transform 0.35s ease;
 }
-    
+
 .starfish-deco:hover {
     transform: rotate(8deg) scale(1.06);
 }
-    
+
 .junglia-card {
     position: absolute;
     right: -20px;
@@ -539,7 +576,7 @@ width: 14px;
     box-sizing: border-box;
     z-index: 100;
 }
-    
+
 .junglia-card img {
     width: 220px;
     height: 160px;
@@ -547,19 +584,19 @@ width: 14px;
     display: block;
     margin: 0 auto 12px;
 }
-    
+
 .junglia-card p {
     margin: 0;
     font-size: 13px;
     line-height: 1.8;
 }
-    
+
 /* ===== 15:00 パイナップルパーク ===== */
 .pineapple-memory {
     padding-right: 330px;
     min-height: 360px;
 }
-    
+
 .pinosaur-card {
     position: absolute;
     right: -40px;
@@ -568,7 +605,7 @@ width: 14px;
     height: 260px;
     z-index: 100;
 }
-    
+
 .pinosaur-logo {
     position: absolute;
     left: 10px;
@@ -584,10 +621,10 @@ width: 14px;
     top: 90px;
     width: 150px;
     z-index: 6;
-        transition: transform 0.35s ease;
-        filter: 0.35s ease;
+    transition: transform 0.35s ease;
+    filter: 0.35s ease;
 }
-    
+
 .pine-spino {
     position: absolute;
     left: 180px;
@@ -602,14 +639,12 @@ width: 14px;
 .pine-ptera:hover,
 .pine-spino:hover {
     transform:
-        translateY(-6px)
-        rotate(-5deg)
-        scale(1.06);
+        translateY(-6px) rotate(-5deg) scale(1.06);
 
     filter:
-        drop-shadow(0 10px 16px rgba(0,0,0,0.18));
+        drop-shadow(0 10px 16px rgba(0, 0, 0, 0.18));
 }
-    
+
 /* ===== パイナソー動画リンク ===== */
 
 .pinosaur-links {
@@ -627,7 +662,7 @@ width: 14px;
     font-weight: 700;
     color: #5a4032;
     box-shadow:
-        0 8px 18px rgba(0,0,0,0.08);
+        0 8px 18px rgba(0, 0, 0, 0.08);
     z-index: 5;
 }
 
@@ -644,12 +679,12 @@ width: 14px;
     color: #d1845a;
     border-color: #d1845a;
 }
-    
+
 /* ===== 17:00 アクアセンス ===== */
 .aquasense-memory {
     padding-right: 230px;
 }
-    
+
 .swimset-evening {
     position: absolute;
     right: -20px;
@@ -658,17 +693,17 @@ width: 14px;
     height: auto;
     transition: transform 0.35s ease;
 }
-    
+
 .swimset-evening:hover {
     transform: rotate(-5deg) scale(1.06);
 }
-    
+
 /* ===== 17:45 オリオン ===== */
 .orion-memory {
     padding-right: 330px;
     min-height: 240px;
 }
-    
+
 .orion-shirt-deco {
     position: absolute;
     right: 10px;
@@ -677,37 +712,37 @@ width: 14px;
     height: auto;
     transition: transform 0.35s ease;
 }
-    
+
 .orion-shirt-deco:hover {
     transform: rotate(5deg) scale(1.05);
 }
-    
+
 /* ===== 19:00 ちぬまん ===== */
 .chinuman-memory .photos {
     align-items: flex-start;
 }
-    
+
 /* ===== 20:20 夜 ===== */
 .night-memory {
     min-height: 260px;
 }
-    
+
 /* ===== aside共通：立体感 ===== */
 .junglia-card {
     border-radius: 6px;
     box-shadow:
-    0 14px 28px rgba(0, 0, 0, 0.12),
-    0 4px 10px rgba(0, 0, 0, 0.08);
+        0 14px 28px rgba(0, 0, 0, 0.12),
+        0 4px 10px rgba(0, 0, 0, 0.08);
     transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
-    
+
 .junglia-card:hover {
     transform: translateY(-6px) rotate(-1deg);
     box-shadow:
-    0 22px 40px rgba(0, 0, 0, 0.18),
-    0 10px 20px rgba(0, 0, 0, 0.10);
+        0 22px 40px rgba(0, 0, 0, 0.18),
+        0 10px 20px rgba(0, 0, 0, 0.10);
 }
-    
+
 .junglia-card::before,
 .outfit-card::after {
     content: "";
@@ -720,7 +755,7 @@ width: 14px;
     transform: translateX(-50%) rotate(-6deg);
     z-index: 20;
 }
-    
+
 /* card持ちブロックを前面：下の予定の線より上に出す */
 .memory-block.has-churaumi-card {
     z-index: 90;
@@ -740,13 +775,13 @@ width: 14px;
 .has-pinosaur-card .pinosaur-card {
     z-index: 999;
 }
-    
+
 /* ===== ページ右下 ===== */
 .day2-end {
     position: relative;
     height: 280px;
 }
-    
+
 .honoka-cutout {
     position: absolute;
     right: 40px;
@@ -755,12 +790,12 @@ width: 14px;
     height: auto;
     transition: transform 0.4s ease, filter 0.4s ease;
 }
-    
+
 .honoka-cutout:hover {
     transform: translateY(-6px) rotate(-4deg) scale(1.05);
     filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.18));
 }
-    
+
 .back-top-link {
     position: absolute;
     right: 210px;
@@ -779,301 +814,301 @@ width: 14px;
 ========================= */
 @media (max-width: 768px) {
     .day2-scrap {
-      padding: 24px 16px 80px;
-      letter-spacing: 0.04em;
-      overflow-x: hidden;
+        padding: 24px 16px 80px;
+        letter-spacing: 0.04em;
+        overflow-x: hidden;
     }
-  
+
     .day2-header {
-      display: block;
-      max-width: 100%;
-      margin-bottom: 30px;
+        display: block;
+        max-width: 100%;
+        margin-bottom: 30px;
     }
-  
+
     .header-left {
-      align-items: center;
+        align-items: center;
     }
-  
+
     .title-art {
-      width: 220px;
+        width: 220px;
     }
-  
+
     .top-link {
-      top: -34px;
-      font-size: 13px;
+        top: -34px;
+        font-size: 13px;
     }
-  
+
     .header-left .map-wrapper {
-      width: min(330px, 100%);
-      margin-top: -42px;
+        width: min(330px, 100%);
+        margin-top: -42px;
     }
-  
+
     .header-left .marker-group {
-      transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
     }
-  
+
     .marker-group.is-active {
-      transform: translate(-50%, -50%) scale(1.45);
+        transform: translate(-50%, -50%) scale(1.45);
     }
-  
+
     .header-main {
-      min-height: auto;
+        min-height: auto;
     }
-  
+
     .intro-area {
-      height: auto;
-      margin: 18px 0 24px;
+        height: auto;
+        margin: 18px 0 24px;
     }
-  
+
     .intro-dino {
-      position: static;
-      width: 120px;
-      display: block;
-      margin: 0 auto -8px;
+        position: static;
+        width: 120px;
+        display: block;
+        margin: 0 auto -8px;
     }
-  
+
     .speech-bubble {
-      position: static;
-      width: auto;
-      padding: 22px 20px;
-      font-size: 13px;
-      line-height: 1.8;
-      border-radius: 28px;
+        position: static;
+        width: auto;
+        padding: 22px 20px;
+        font-size: 13px;
+        line-height: 1.8;
+        border-radius: 28px;
     }
-  
+
     .day2-schedule {
-      margin: 0;
-      background: rgba(255, 255, 255, 0.42);
-      padding: 18px 18px 8px;
-      border-radius: 18px;
+        margin: 0;
+        background: rgba(255, 255, 255, 0.42);
+        padding: 18px 18px 8px;
+        border-radius: 18px;
     }
-  
+
     .day2-schedule a {
-      font-size: 14px;
-      margin-bottom: 10px;
-      line-height: 1.6;
+        font-size: 14px;
+        margin-bottom: 10px;
+        line-height: 1.6;
     }
-  
+
     .day2-scrap .outfit-card {
-      width: 90%;
-      height: auto;
-      min-height: 0;
-      margin: 28px auto 0;
-      padding: 18px 18px 22px;
-      transform: none;
+        width: 90%;
+        height: auto;
+        min-height: 0;
+        margin: 28px auto 0;
+        padding: 18px 18px 22px;
+        transform: none;
     }
-  
+
     .day2-scrap .outfit-card:hover {
-      transform: none;
+        transform: none;
     }
-  
+
     .day2-scrap .outfit-card .outfit-girl {
-      position: relative;
-      right: auto;
-      top: auto;
-      width: 100%;
-      max-width: 300px;
-      display: block;
-      margin: -8px auto 0;
+        position: relative;
+        right: auto;
+        top: auto;
+        width: 100%;
+        max-width: 300px;
+        display: block;
+        margin: -8px auto 0;
     }
-  
+
     .day2-scrap .outfit-card .umbrella-art {
-      left: 8px;
-      top: 76px;
-      width: 130px;
+        left: 8px;
+        top: 76px;
+        width: 130px;
     }
-  
+
     .day2-scrap .outfit-card p {
-      position: relative;
-      left: auto;
-      right: auto;
-      bottom: auto;
-      margin-top: 12px;
-      font-size: 13px;
+        position: relative;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        margin-top: 12px;
+        font-size: 13px;
     }
-  
+
     .day2-timeline {
-      max-width: 100%;
-      margin-top: 34px;
+        max-width: 100%;
+        margin-top: 34px;
     }
-  
+
     .day2-timeline::before {
-      left: 10px;
-      width: 3px;
+        left: 10px;
+        width: 3px;
     }
-  
+
     .memory-block {
-      display: block;
-      margin-bottom: 48px;
-      padding-left: 26px;
+        display: block;
+        margin-bottom: 48px;
+        padding-left: 26px;
     }
-  
+
     .memory-block::before {
-      left: 0;
-      width: 22px;
-      height: 22px;
+        left: 0;
+        width: 22px;
+        height: 22px;
     }
-  
+
     .memory-block::after {
-      left: 26px;
-      top: 12px;
+        left: 26px;
+        top: 12px;
     }
-  
-    .memory-block > .time {
-      margin-left: 14px;
-      margin-bottom: 12px;
-      font-size: 15px;
+
+    .memory-block>.time {
+        margin-left: 14px;
+        margin-bottom: 12px;
+        font-size: 15px;
     }
-  
+
     .memory-main {
-      padding-top: 14px;
+        padding-top: 14px;
     }
-  
+
     .memory-main h2 {
-      margin: 0 0 14px;
-      font-size: 19px;
-      line-height: 1.5;
+        margin: 0 0 14px;
+        font-size: 19px;
+        line-height: 1.5;
     }
-  
+
     .memory-main p {
-      font-size: 14px;
-      line-height: 1.9;
+        font-size: 14px;
+        line-height: 1.9;
     }
-  
+
     .photos {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
     }
-  
+
     .photos img,
     .photo-landscape,
     .photo-portrait {
-      width: 100%;
-      height: 150px;
-      object-fit: cover;
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
     }
-  
+
     .pool-morning,
     .churaumi-memory,
     .kishimoto-memory,
     .pineapple-memory,
     .aquasense-memory,
     .orion-memory {
-      padding-right: 0;
-      min-height: 0;
+        padding-right: 0;
+        min-height: 0;
     }
-  
+
     .swimset-morning,
     .swimset-evening,
     .orion-shirt-deco,
     .starfish-deco {
-      position: static;
-      width: 160px;
-      display: block;
-      margin: 14px auto 0;
+        position: static;
+        width: 160px;
+        display: block;
+        margin: 14px auto 0;
     }
-  
+
     .deco-fish {
-      position: static;
-      display: inline-block;
-      margin: 10px 6px 0;
-      pointer-events: auto;
+        position: static;
+        display: inline-block;
+        margin: 10px 6px 0;
+        pointer-events: auto;
     }
-  
+
     .soushihagi,
     .hanatakasago,
     .cuttlefish {
-      width: 95px;
+        width: 95px;
     }
-  
+
     .manatee-card {
-      position: relative;
-      right: auto;
-      top: auto;
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      margin: 24px 0 0;
+        position: relative;
+        right: auto;
+        top: auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 24px 0 0;
     }
-  
+
     .manatee-links {
-      width: 170px;
-      padding: 16px 18px;
-      font-size: 12px;
+        width: 170px;
+        padding: 16px 18px;
+        font-size: 12px;
     }
-  
+
     .manatee-card img {
-      width: 115px;
+        width: 115px;
     }
-  
+
     .junglia-card {
-      position: relative;
-      right: auto;
-      top: auto;
-      width: 100%;
-      margin: 24px 0 0;
-      padding: 22px 18px;
+        position: relative;
+        right: auto;
+        top: auto;
+        width: 100%;
+        margin: 24px 0 0;
+        padding: 22px 18px;
     }
-  
+
     .junglia-card img {
-      width: 100%;
-      height: auto;
-      max-height: 220px;
-      object-fit: cover;
+        width: 100%;
+        height: auto;
+        max-height: 220px;
+        object-fit: cover;
     }
-  
+
     .pinosaur-card {
-      position: relative;
-      right: auto;
-      top: auto;
-      width: 100%;
-      height: 330px;
-      margin-top: 18px;
+        position: relative;
+        right: auto;
+        top: auto;
+        width: 100%;
+        height: 330px;
+        margin-top: 18px;
     }
-  
+
     .pinosaur-logo {
-      left: 50%;
-      top: 80px;
-      width: 280px;
-      transform: translateX(-50%) rotate(-5deg);
+        left: 50%;
+        top: 80px;
+        width: 280px;
+        transform: translateX(-50%) rotate(-5deg);
     }
-  
+
     .pine-ptera {
-      left: 6px;
-      top: 70px;
-      width: 110px;
+        left: 6px;
+        top: 70px;
+        width: 110px;
     }
-  
+
     .pine-spino {
-      left: 125px;
-      top: 10px;
-      width: 200px;
+        left: 125px;
+        top: 10px;
+        width: 200px;
     }
-  
+
     .pinosaur-links {
-      left: 50%;
-      top: 245px;
-      transform: translateX(-50%);
-      width: 145px;
-      padding: 14px 16px;
+        left: 50%;
+        top: 245px;
+        transform: translateX(-50%);
+        width: 145px;
+        padding: 14px 16px;
     }
-  
+
     .day2-end {
-      height: 220px;
+        height: 220px;
     }
-  
+
     .honoka-cutout {
-      right: 8px;
-      width: 90px;
+        right: 8px;
+        width: 90px;
     }
-  
+
     .back-top-link {
-      right: 145px;
-      bottom: 18px;
-      font-size: 13px;
+        right: 145px;
+        bottom: 18px;
+        font-size: 13px;
     }
-  
+
     .day2-scrap .photos img:hover,
     .day2-scrap .single-img:hover,
     .day2-scrap video:hover,
@@ -1081,6 +1116,6 @@ width: 14px;
     .pine-ptera:hover,
     .pine-spino:hover,
     .junglia-card:hover {
-      transform: none;
+        transform: none;
     }
-  }
+}

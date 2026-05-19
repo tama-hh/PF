@@ -6,36 +6,36 @@
     padding: 42px 56px 120px;
     box-sizing: border-box;
     letter-spacing: 0.08em;
-    }
-    
-    .day3-scrap img {
+}
+
+.day3-scrap img {
     box-sizing: border-box;
-    }
-    
-    /* ===== 上部3カラム ===== */
-    .day3-header {
+}
+
+/* ===== 上部3カラム ===== */
+.day3-header {
     max-width: 1180px;
     margin: 0 auto 34px;
     display: grid;
     grid-template-columns: 260px 1fr 285px;
     gap: 34px;
     align-items: start;
-    }
-    
-    /* ===== 左カラム ===== */
-    .header-left {
+}
+
+/* ===== 左カラム ===== */
+.header-left {
     position: relative;
     display: flex;
     flex-direction: column;
     gap: 2px;
-    }
-    
-    .title-art {
+}
+
+.title-art {
     width: 250px;
     display: block;
-    }
-    
-    .top-link {
+}
+
+.top-link {
     position: relative;
     z-index: 100;
     pointer-events: auto;
@@ -46,73 +46,96 @@
     text-decoration: none;
     border-bottom: 1px solid #b83550;
     width: fit-content;
-    }
-    
-    /* ===== 地図 ===== */
-    .header-left .map-wrapper {
+}
+
+/* ===== 地図 ===== */
+.header-left .map-wrapper {
     position: relative;
     width: 400px;
     margin-top: -70px;
-    }
-    
-    .header-left .okinawa-map {
+}
+
+.header-left .okinawa-map {
     width: 100%;
     display: block;
     opacity: 0.95;
-    }
-    
-    .header-left .marker-group {
+}
+
+.header-left .marker-group {
     position: absolute;
     transform: translate(-160%, -50%);
     opacity: 0.45;
     transition: 0.25s ease;
-    }
-    
-    .header-left .map-marker {
+}
+
+.header-left .map-marker {
     width: 14px;
     height: 14px;
     border-radius: 50%;
     display: block;
     background: #b83550;
     box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.65);
-    }
-    
+}
+
 /* DAY3地図ポイント位置 */
-.m-0830 { top: 50%; left: 44%; }
-.m-1200 { top: 65%; left: 41%; }
-.m-1730 { top: 55%; left: 34%; }
-.m-1830 { top: 68%; left: 36%; }
-    
-    .marker-group.is-active {
+.m-0830 {
+    top: 50%;
+    left: 44%;
+}
+
+.m-1200 {
+    top: 65%;
+    left: 41%;
+}
+
+.m-1730 {
+    top: 55%;
+    left: 34%;
+}
+
+.m-1830 {
+    top: 68%;
+    left: 36%;
+}
+
+.marker-group.is-active {
     opacity: 1;
     transform: translate(-160%, -50%) scale(1.6);
-    }
-    
-    .marker-group.is-active .map-marker {
+}
+
+.marker-group.is-active .map-marker {
     animation: pulseMarker 1.8s infinite;
     box-shadow:
-    0 0 0 6px rgba(255, 255, 255, 0.85),
-    0 0 18px rgba(184, 53, 80, 0.95);
+        0 0 0 6px rgba(255, 255, 255, 0.85),
+        0 0 18px rgba(184, 53, 80, 0.95);
+}
+
+@keyframes pulseMarker {
+    0% {
+        transform: scale(1);
     }
-    
-    @keyframes pulseMarker {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.25); }
-    100% { transform: scale(1); }
+
+    50% {
+        transform: scale(1.25);
     }
-    
-    /* ===== 中央カラム ===== */
-    .header-main {
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* ===== 中央カラム ===== */
+.header-main {
     position: relative;
     min-height: 320px;
-    }
-    
-    .intro-area {
+}
+
+.intro-area {
     position: relative;
     height: 130px;
-    }
-    
-    .intro-cameraman {
+}
+
+.intro-cameraman {
     position: absolute;
     right: -40px;
     top: -28px;
@@ -120,14 +143,14 @@
     height: auto;
     object-fit: contain;
     transition: transform 0.35s ease, filter 0.35s ease;
-    }
-    
-    .intro-cameraman:hover {
+}
+
+.intro-cameraman:hover {
     transform: translateY(-6px) rotate(4deg) scale(1.06);
-    filter: drop-shadow(0 10px 14px rgba(0,0,0,0.16));
-    }
-    
-    .speech-bubble {
+    filter: drop-shadow(0 10px 14px rgba(0, 0, 0, 0.16));
+}
+
+.speech-bubble {
     position: absolute;
     left: 40px;
     top: 10px;
@@ -141,14 +164,14 @@
     background: rgba(255, 255, 255, 0.48);
     border: 4px solid rgba(255, 255, 255, 0.85);
     border-radius: 50%;
-    }
-    
-    .day3-schedule {
+}
+
+.day3-schedule {
     margin-left: 200px;
     margin-top: 52px;
-    }
-    
-    .day3-schedule a {
+}
+
+.day3-schedule a {
     display: block;
     position: relative;
     margin: 0 0 12px;
@@ -159,14 +182,14 @@
     text-decoration: none;
     cursor: pointer;
     transition: 0.25s ease;
-    }
-    
-    .day3-schedule a:hover {
+}
+
+.day3-schedule a:hover {
     transform: translateX(6px);
     color: #b83550;
-    }
-    
-    .day3-schedule a::after {
+}
+
+.day3-schedule a::after {
     content: "";
     position: absolute;
     left: -12px;
@@ -175,14 +198,14 @@
     height: 2px;
     background: #b83550;
     transition: 0.3s ease;
-    }
-    
-    .day3-schedule a:hover::after {
+}
+
+.day3-schedule a:hover::after {
     width: 8px;
-    }
-    
-    /* ===== 今日のコーデ ===== */
-    .day3-scrap .outfit-card {
+}
+
+/* ===== 今日のコーデ ===== */
+.day3-scrap .outfit-card {
     position: relative;
     background: #e9a3bf;
     width: 285px;
@@ -192,19 +215,19 @@
     overflow: visible;
     transform: rotate(1.5deg);
     box-shadow:
-    0 18px 40px rgba(0, 0, 0, 0.12),
-    0 4px 10px rgba(0, 0, 0, 0.08);
+        0 18px 40px rgba(0, 0, 0, 0.12),
+        0 4px 10px rgba(0, 0, 0, 0.08);
     transition: transform 0.35s ease, box-shadow 0.35s ease;
-    }
-    
-    .day3-scrap .outfit-card:hover {
+}
+
+.day3-scrap .outfit-card:hover {
     transform: translateY(-8px) rotate(2deg);
     box-shadow:
-    0 28px 55px rgba(0, 0, 0, 0.18),
-    0 10px 22px rgba(0, 0, 0, 0.12);
-    }
-    
-    .day3-scrap .outfit-card h2 {
+        0 28px 55px rgba(0, 0, 0, 0.18),
+        0 10px 22px rgba(0, 0, 0, 0.12);
+}
+
+.day3-scrap .outfit-card h2 {
     margin: 0 0 12px;
     text-align: center;
     color: #6a4c35;
@@ -213,9 +236,9 @@
     padding-bottom: 7px;
     position: relative;
     z-index: 4;
-    }
-    
-    .day3-scrap .outfit-card .outfit-girl {
+}
+
+.day3-scrap .outfit-card .outfit-girl {
     position: absolute;
     right: -120px;
     top: 48px;
@@ -223,9 +246,9 @@
     height: auto;
     max-width: none;
     z-index: 3;
-    }
-    
-    .day3-scrap .outfit-card p {
+}
+
+.day3-scrap .outfit-card p {
     position: absolute;
     left: 18px;
     right: 18px;
@@ -239,16 +262,16 @@
     background: rgba(255, 255, 255, 0.72);
     padding: 8px 10px;
     border-radius: 14px;
-    }
-    
-    /* ===== タイムライン ===== */
-    .day3-timeline {
+}
+
+/* ===== タイムライン ===== */
+.day3-timeline {
     max-width: 1180px;
     margin: 34px auto 0;
     position: relative;
-    }
-    
-    .day3-timeline::before {
+}
+
+.day3-timeline::before {
     content: "";
     position: absolute;
     left: 16px;
@@ -256,18 +279,18 @@
     bottom: 0;
     width: 4px;
     background: #b83550;
-    }
-    
-    .memory-block {
+}
+
+.memory-block {
     position: relative;
     display: grid;
     grid-template-columns: 82px 1fr;
     gap: 28px;
     margin-bottom: 44px;
     z-index: 1;
-    }
-    
-    .memory-block::before {
+}
+
+.memory-block::before {
     content: "";
     position: absolute;
     left: 6.5px;
@@ -277,9 +300,9 @@
     border-radius: 50%;
     background: #b83550;
     z-index: 2;
-    }
-    
-    .memory-block::after {
+}
+
+.memory-block::after {
     content: "";
     position: absolute;
     left: 82px;
@@ -288,9 +311,9 @@
     height: 2px;
     background: #c9a85e;
     z-index: -1;
-    }
-    
-    .memory-block > .time {
+}
+
+.memory-block>.time {
     margin-left: 36px;
     width: fit-content;
     height: fit-content;
@@ -303,72 +326,72 @@
     border-radius: 2px;
     position: relative;
     z-index: 10;
-    }
-    
-    .memory-main {
+}
+
+.memory-main {
     position: relative;
     padding-top: 12px;
     z-index: 1;
-    }
-    
-    .memory-main h2 {
+}
+
+.memory-main h2 {
     margin: 0 0 14px 20px;
     font-size: 23px;
     color: #5a4032;
     letter-spacing: 0.08em;
-    }
-    
-    .memory-main p {
+}
+
+.memory-main p {
     margin: 14px 0 0;
     font-size: 15px;
     line-height: 2;
     font-weight: 700;
-    }
-    
-    /* ===== 通常写真 ===== */
-    .day3-scrap .photos img,
-    .day3-scrap .scrap-photo {
+}
+
+/* ===== 通常写真 ===== */
+.day3-scrap .photos img,
+.day3-scrap .scrap-photo {
     position: relative;
     z-index: 1;
     cursor: pointer;
     transition:
-    transform 0.35s ease,
-    box-shadow 0.35s ease,
-    filter 0.35s ease;
-    }
-    
-    .day3-scrap .photos img:hover,
-    .day3-scrap .scrap-photo:hover {
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        filter 0.35s ease;
+}
+
+.day3-scrap .photos img:hover,
+.day3-scrap .scrap-photo:hover {
     transform: scale(1.08);
     box-shadow: 0 18px 35px rgba(0, 0, 0, 0.22);
     filter: brightness(1.06) saturate(1.06);
     z-index: 80;
-    }
-    
-    /* ===== 08:30 海 ===== */
-    .sea-memory {
+}
+
+/* ===== 08:30 海 ===== */
+.sea-memory {
     padding-right: 260px;
     min-height: 260px;
-    }
-    
-    .swimset-deco {
+}
+
+.swimset-deco {
     position: absolute;
     right: 10px;
     top: 80px;
     width: 250px;
     height: auto;
     transition: transform 0.35s ease, filter 0.35s ease;
-    }
-    
-    .swimset-deco:hover {
+}
+
+.swimset-deco:hover {
     transform: rotate(6deg) scale(1.06);
-    filter: drop-shadow(0 10px 14px rgba(0,0,0,0.16));
-    }
-    
-    /* ===== 12:00 Walz ===== */
-    .walz-memory {
+    filter: drop-shadow(0 10px 14px rgba(0, 0, 0, 0.16));
+}
+
+/* ===== 12:00 Walz ===== */
+.walz-memory {
     min-height: 270px;
-    }
+}
 
 /* ===== マスキングテープ風タイトル ===== */
 .tape-title {
@@ -381,17 +404,15 @@
     letter-spacing: 0.12em;
     color: #6a4c35;
     background:
-        repeating-linear-gradient(
-            -45deg,
-            rgba(255,255,255,0.28) 0,
-            rgba(255,255,255,0.28) 8px,
-            rgba(255,255,255,0.08) 8px,
-            rgba(255,255,255,0.08) 16px
-        ),
+        repeating-linear-gradient(-45deg,
+            rgba(255, 255, 255, 0.28) 0,
+            rgba(255, 255, 255, 0.28) 8px,
+            rgba(255, 255, 255, 0.08) 8px,
+            rgba(255, 255, 255, 0.08) 16px),
         rgba(255, 245, 170, 0.86);
     box-shadow:
-        0 10px 18px rgba(0,0,0,0.10),
-        inset 0 0 0 2px rgba(255,255,255,0.35);
+        0 10px 18px rgba(0, 0, 0, 0.10),
+        inset 0 0 0 2px rgba(255, 255, 255, 0.35);
     border-radius: 4px;
     z-index: 20;
     transform: rotate(-3deg);
@@ -420,7 +441,7 @@
 
 .tape-title:hover {
     transform: translateY(-5px) rotate(-2deg) scale(1.03);
-    filter: drop-shadow(0 10px 14px rgba(0,0,0,0.14));
+    filter: drop-shadow(0 10px 14px rgba(0, 0, 0, 0.14));
 }
 
 /* 個別配置 */
@@ -428,13 +449,11 @@
     margin-left: -10px;
     margin-bottom: -20px;
     background:
-        repeating-linear-gradient(
-            -45deg,
-            rgba(255,255,255,0.28) 0,
-            rgba(255,255,255,0.28) 8px,
-            rgba(255,255,255,0.08) 8px,
-            rgba(255,255,255,0.08) 16px
-        ),
+        repeating-linear-gradient(-45deg,
+            rgba(255, 255, 255, 0.28) 0,
+            rgba(255, 255, 255, 0.28) 8px,
+            rgba(255, 255, 255, 0.08) 8px,
+            rgba(255, 255, 255, 0.08) 16px),
         rgba(255, 185, 210, 0.9);
 }
 
@@ -447,13 +466,11 @@
     top: -240px;
 
     background:
-        repeating-linear-gradient(
-            -45deg,
-            rgba(255,255,255,0.30) 0,
-            rgba(255,255,255,0.30) 8px,
-            rgba(255,255,255,0.08) 8px,
-            rgba(255,255,255,0.08) 16px
-        ),
+        repeating-linear-gradient(-45deg,
+            rgba(255, 255, 255, 0.30) 0,
+            rgba(255, 255, 255, 0.30) 8px,
+            rgba(255, 255, 255, 0.08) 8px,
+            rgba(255, 255, 255, 0.08) 16px),
         rgba(166, 224, 214, 0.9);
 
     transform: rotate(3deg);
@@ -461,9 +478,7 @@
 
 .momenbaru-tape:hover {
     transform:
-        translateY(-5px)
-        rotate(3deg)
-        scale(1.03);
+        translateY(-5px) rotate(3deg) scale(1.03);
 }
 
 .offshot-tape {
@@ -471,70 +486,68 @@
     margin-bottom: -10px;
     font-size: 30px;
     background:
-        repeating-linear-gradient(
-            -45deg,
-            rgba(255,255,255,0.30) 0,
-            rgba(255,255,255,0.30) 8px,
-            rgba(255,255,255,0.08) 8px,
-            rgba(255,255,255,0.08) 16px
-        ),
+        repeating-linear-gradient(-45deg,
+            rgba(255, 255, 255, 0.30) 0,
+            rgba(255, 255, 255, 0.30) 8px,
+            rgba(255, 255, 255, 0.08) 8px,
+            rgba(255, 255, 255, 0.08) 16px),
         rgba(255, 232, 128, 0.9);
     transform: rotate(-5deg);
 }
 
-    /* ===== スクラップ共通 ===== */
-    .scrap-section {
+/* ===== スクラップ共通 ===== */
+.scrap-section {
     max-width: 1180px;
     margin: 46px auto 84px;
     position: relative;
-    }
-    
-    .section-logo {
+}
+
+.section-logo {
     position: relative;
     display: block;
     height: auto;
     z-index: 20;
     pointer-events: auto;
     transition: transform 0.35s ease, filter 0.35s ease;
-    }
-    
-    .section-logo:hover {
+}
+
+.section-logo:hover {
     transform: translateY(-5px) rotate(-2deg) scale(1.03);
-    filter: drop-shadow(0 10px 16px rgba(0,0,0,0.12));
-    }
-    
-    .american-logo {
+    filter: drop-shadow(0 10px 16px rgba(0, 0, 0, 0.12));
+}
+
+.american-logo {
     width: 580px;
     margin-left: -22px;
     margin-bottom: -40px;
-    }
-    
-    .momenbaru-logo {
+}
+
+.momenbaru-logo {
     width: 520px;
     margin-left: 560px;
     margin-top: -180px;
-    }
-    
-    .offshot-logo {
+}
+
+.offshot-logo {
     width: 300px;
     margin-left: 28px;
     margin-bottom: -20px;
-    }
-    
-    .collage {
+}
+
+.collage {
     position: relative;
     min-height: 680px;
-    }
-    
-    .scrap-photo {
+}
+
+.scrap-photo {
     position: absolute;
     display: block;
     object-fit: cover;
     box-shadow:
-    0 16px 32px rgba(0,0,0,0.12),
-    0 4px 8px rgba(0,0,0,0.08);
-    }
-    
+        0 16px 32px rgba(0, 0, 0, 0.12),
+        0 4px 8px rgba(0, 0, 0, 0.08);
+}
+
 /* ===== スクラップ写真：崩れない・縦横比そのまま版 ===== */
 
 .collage {
@@ -550,8 +563,8 @@
     height: auto;
     object-fit: unset;
     box-shadow:
-        0 12px 24px rgba(0,0,0,0.14),
-        0 4px 8px rgba(0,0,0,0.08);
+        0 12px 24px rgba(0, 0, 0, 0.14),
+        0 4px 8px rgba(0, 0, 0, 0.08);
 }
 
 /* ===== アメリカンヴィレッジ ===== */
@@ -709,61 +722,61 @@
     top: -100px;
     left: 100px;
 }
-    
-    
-    /* ===== 下側タイムライン ===== */
-    .lower-timeline {
+
+
+/* ===== 下側タイムライン ===== */
+.lower-timeline {
     margin-top: 20px;
-    }
-    
-    .alivila-memory {
+}
+
+.alivila-memory {
     min-height: 260px;
-    }
-    
-    /* ===== 夜アメリカン ===== */
-    .night-american-memory {
+}
+
+/* ===== 夜アメリカン ===== */
+.night-american-memory {
     min-height: 360px;
     padding-right: 0;
-    }
-    
-    .memo-card {
+}
+
+.memo-card {
     width: 380px;
     margin: 42px 0 0 34px;
     padding: 22px 26px;
     background: #f5ef9a;
     transform: rotate(-6deg);
     box-shadow:
-    0 14px 28px rgba(0,0,0,0.10),
-    0 4px 10px rgba(0,0,0,0.08);
-    }
-    
-    .memo-card p {
+        0 14px 28px rgba(0, 0, 0, 0.10),
+        0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.memo-card p {
     margin: 0;
     font-size: 13px;
     line-height: 2;
-    }
-    
-    .fly-honoka-deco {
+}
+
+.fly-honoka-deco {
     position: absolute;
     right: 30px;
     top: 700px;
     width: 190px;
     height: auto;
     transition: transform 0.4s ease, filter 0.4s ease;
-    }
-    
-    .fly-honoka-deco:hover {
+}
+
+.fly-honoka-deco:hover {
     transform: translateY(-8px) rotate(-5deg) scale(1.06);
-    filter: drop-shadow(0 10px 18px rgba(0,0,0,0.18));
-    }
-    
-    /* ===== ページ下 ===== */
-    .day3-end {
+    filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.18));
+}
+
+/* ===== ページ下 ===== */
+.day3-end {
     position: relative;
     height: 240px;
-    }
-    
-    .back-top-link {
+}
+
+.back-top-link {
     position: absolute;
     right: 300px;
     bottom: 18px;
@@ -771,7 +784,7 @@
     font-size: 13px;
     font-weight: 700;
     text-decoration: none;
-    }
+}
 
 
 
@@ -782,235 +795,235 @@
 ========================= */
 @media (max-width: 768px) {
     .day3-scrap {
-      padding: 24px 16px 80px;
-      letter-spacing: 0.04em;
-      overflow-x: hidden;
+        padding: 24px 16px 80px;
+        letter-spacing: 0.04em;
+        overflow-x: hidden;
     }
-  
+
     .day3-header {
-      display: block;
-      max-width: 100%;
-      margin-bottom: 30px;
+        display: block;
+        max-width: 100%;
+        margin-bottom: 30px;
     }
-  
+
     .header-left {
-      align-items: center;
+        align-items: center;
     }
-  
+
     .title-art {
-      width: 220px;
+        width: 220px;
     }
-  
+
     .top-link {
-      top: -34px;
-      font-size: 13px;
+        top: -34px;
+        font-size: 13px;
     }
-  
+
     .header-left .map-wrapper {
-      width: min(330px, 100%);
-      margin-top: -42px;
+        width: min(330px, 100%);
+        margin-top: -42px;
     }
-  
+
     .header-left .marker-group {
-      transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
     }
-  
+
     .marker-group.is-active {
-      transform: translate(-50%, -50%) scale(1.45);
+        transform: translate(-50%, -50%) scale(1.45);
     }
-  
+
     .header-main {
-      min-height: auto;
+        min-height: auto;
     }
-  
+
     .intro-area {
-      height: auto;
-      margin: 18px 0 24px;
+        height: auto;
+        margin: 18px 0 24px;
     }
-  
+
     .intro-cameraman {
-      position: static;
-      width: 120px;
-      display: block;
-      margin: 0 auto -8px;
+        position: static;
+        width: 120px;
+        display: block;
+        margin: 0 auto -8px;
     }
-  
+
     .speech-bubble {
-      position: static;
-      width: auto;
-      padding: 22px 20px;
-      font-size: 13px;
-      line-height: 1.8;
-      border-radius: 28px;
+        position: static;
+        width: auto;
+        padding: 22px 20px;
+        font-size: 13px;
+        line-height: 1.8;
+        border-radius: 28px;
     }
-  
+
     .day3-schedule {
-      margin: 0;
-      background: rgba(255, 255, 255, 0.42);
-      padding: 18px 18px 8px;
-      border-radius: 18px;
+        margin: 0;
+        background: rgba(255, 255, 255, 0.42);
+        padding: 18px 18px 8px;
+        border-radius: 18px;
     }
-  
+
     .day3-schedule a {
-      font-size: 14px;
-      margin-bottom: 10px;
-      line-height: 1.6;
+        font-size: 14px;
+        margin-bottom: 10px;
+        line-height: 1.6;
     }
-  
+
     .day3-scrap .outfit-card {
-      width: 90%;
-      height: auto;
-      min-height: 0;
-      margin: 28px auto 0;
-      padding: 18px 18px 22px;
-      transform: none;
+        width: 90%;
+        height: auto;
+        min-height: 0;
+        margin: 28px auto 0;
+        padding: 18px 18px 22px;
+        transform: none;
     }
-  
+
     .day3-scrap .outfit-card:hover {
-      transform: none;
+        transform: none;
     }
-  
+
     .day3-scrap .outfit-card .outfit-girl {
-      position: relative;
-      right: auto;
-      top: auto;
-      width: 100%;
-      max-width: 300px;
-      display: block;
-      margin: -8px auto 0;
+        position: relative;
+        right: auto;
+        top: auto;
+        width: 100%;
+        max-width: 300px;
+        display: block;
+        margin: -8px auto 0;
     }
-  
+
     .day3-scrap .outfit-card p {
-      position: relative;
-      left: auto;
-      right: auto;
-      bottom: auto;
-      margin-top: 12px;
-      font-size: 13px;
+        position: relative;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        margin-top: 12px;
+        font-size: 13px;
     }
-  
+
     .day3-timeline {
-      max-width: 100%;
-      margin-top: 34px;
+        max-width: 100%;
+        margin-top: 34px;
     }
-  
+
     .day3-timeline::before {
-      left: 10px;
-      width: 3px;
+        left: 10px;
+        width: 3px;
     }
-  
+
     .memory-block {
-      display: block;
-      margin-bottom: 48px;
-      padding-left: 26px;
+        display: block;
+        margin-bottom: 48px;
+        padding-left: 26px;
     }
-  
+
     .memory-block::before {
-      left: 0;
-      width: 22px;
-      height: 22px;
+        left: 0;
+        width: 22px;
+        height: 22px;
     }
-  
+
     .memory-block::after {
-      left: 26px;
-      top: 12px;
+        left: 26px;
+        top: 12px;
     }
-  
-    .memory-block > .time {
-      margin-left: 14px;
-      margin-bottom: 12px;
-      font-size: 15px;
+
+    .memory-block>.time {
+        margin-left: 14px;
+        margin-bottom: 12px;
+        font-size: 15px;
     }
-  
+
     .memory-main {
-      padding-top: 14px;
+        padding-top: 14px;
     }
-  
+
     .memory-main h2 {
-      margin: 0 0 14px;
-      font-size: 19px;
-      line-height: 1.5;
+        margin: 0 0 14px;
+        font-size: 19px;
+        line-height: 1.5;
     }
-  
+
     .memory-main p {
-      font-size: 14px;
-      line-height: 1.9;
+        font-size: 14px;
+        line-height: 1.9;
     }
-  
+
     .photos {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
     }
-  
+
     .photos img,
     .photo-landscape,
     .photo-portrait {
-      width: 100%;
-      height: 150px;
-      object-fit: cover;
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
     }
-  
+
     .sea-memory {
-      padding-right: 0;
-      min-height: 0;
+        padding-right: 0;
+        min-height: 0;
     }
-  
+
     .swimset-deco {
-      position: static;
-      width: 160px;
-      display: block;
-      margin: 14px auto 0;
+        position: static;
+        width: 160px;
+        display: block;
+        margin: 14px auto 0;
     }
-  
+
     .scrap-section {
-      max-width: 100%;
-      margin: 42px auto 58px;
+        max-width: 100%;
+        margin: 42px auto 58px;
     }
-  
+
     .tape-title {
-      display: block;
-      width: fit-content;
-      max-width: 86%;
-      margin: 0 auto 18px;
-      padding: 13px 24px 12px;
-      font-size: 22px;
-      line-height: 1.2;
-      text-align: center;
-      transform: rotate(-3deg);
+        display: block;
+        width: fit-content;
+        max-width: 86%;
+        margin: 0 auto 18px;
+        padding: 13px 24px 12px;
+        font-size: 22px;
+        line-height: 1.2;
+        text-align: center;
+        transform: rotate(-3deg);
     }
-  
+
     .american-tape,
     .momenbaru-tape,
     .offshot-tape {
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 18px;
-      top: auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 18px;
+        top: auto;
     }
-  
+
     .momenbaru-tape {
-      transform: rotate(3deg);
+        transform: rotate(3deg);
     }
-  
+
     .offshot-tape {
-      font-size: 22px;
+        font-size: 22px;
     }
-  
+
     .collage,
     .american-collage,
     .momenbaru-collage,
     .offshot-collage {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-areas: none;
-      gap: 12px;
-      min-height: 0;
-      max-width: 100%;
-      margin: 0 auto;
-      padding-top: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: none;
+        gap: 12px;
+        min-height: 0;
+        max-width: 100%;
+        margin: 0 auto;
+        padding-top: 0;
     }
-  
+
     .scrap-photo,
     .av-kiss,
     .av-angel,
@@ -1031,63 +1044,64 @@
     .off-store,
     .off-walking,
     .off-setting {
-      grid-area: auto;
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      top: auto;
-      left: auto;
-      transform: none;
+        grid-area: auto;
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        top: auto;
+        left: auto;
+        transform: none;
     }
-  
+
     .av-angel,
     .mb-forest,
     .off-car {
-      grid-column: span 2;
-      height: auto;
-      max-height: 420px;
-      object-fit: contain;
-      background: rgba(255, 255, 255, 0.45);
+        grid-column: span 2;
+        height: auto;
+        max-height: 420px;
+        object-fit: contain;
+        background: rgba(255, 255, 255, 0.45);
     }
-  
+
     .memo-card {
-      width: auto;
-      margin: 24px 0 0;
-      padding: 20px 18px;
-      transform: none;
+        width: auto;
+        margin: 24px 0 0;
+        padding: 20px 18px;
+        transform: none;
     }
-  
+
     .memo-card p {
-      font-size: 13px;
-      line-height: 1.9;
+        font-size: 13px;
+        line-height: 1.9;
     }
 
     .day3-timeline::before {
         bottom: 180px;
-      }
+    }
+
     .fly-honoka-deco {
-      position: static;
-      width: 90px;
-      display: block;
-      margin: 150px 0 0 auto;
+        position: static;
+        width: 90px;
+        display: block;
+        margin: 150px 0 0 auto;
     }
-  
+
     .day3-end {
-      height: 120px;
+        height: 120px;
     }
-  
+
     .back-top-link {
-      right: 90px;
-      bottom: 200px;
-      font-size: 13px;
+        right: 90px;
+        bottom: 200px;
+        font-size: 13px;
     }
-  
+
     .day3-scrap .photos img:hover,
     .day3-scrap .scrap-photo:hover,
     .swimset-deco:hover,
     .intro-cameraman:hover,
     .tape-title:hover,
     .fly-honoka-deco:hover {
-      transform: none;
+        transform: none;
     }
-  }
+}

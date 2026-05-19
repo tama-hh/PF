@@ -196,8 +196,7 @@ body {
   display: block;
   opacity: 0.95;
   filter:
-    drop-shadow(0 4px 6px rgba(0, 0, 0, 0.16))
-    drop-shadow(0 8px 12px rgba(0, 0, 0, 0.10));
+    drop-shadow(0 4px 6px rgba(0, 0, 0, 0.16)) drop-shadow(0 8px 12px rgba(0, 0, 0, 0.10));
 }
 
 .marker-group {
@@ -421,7 +420,7 @@ html {
   transform: translateY(40px);
   transition: opacity 0.9s ease, transform 0.9s ease;
 }
-    
+
 .fade-in.show {
   opacity: 1;
   transform: translateY(0);
@@ -433,14 +432,14 @@ html {
   gap: 12px;
   align-items: flex-end;
 }
-    
+
 .photo-landscape {
   width: 260px;
   height: 190px;
   object-fit: cover;
   display: block;
 }
-    
+
 .photo-portrait {
   width: 190px;
   height: 260px;
@@ -462,12 +461,12 @@ html {
   pointer-events: none;
   transition: 0.35s ease;
 }
-  
+
 .photo-modal.is-open {
   opacity: 1;
   pointer-events: auto;
 }
-  
+
 #modalImage {
   max-width: 88vw;
   max-height: 88vh;
@@ -476,7 +475,7 @@ html {
   transform: scale(0.82);
   transition: transform 0.35s ease;
 }
-  
+
 .photo-modal.is-open #modalImage {
   transform: scale(1);
 }
