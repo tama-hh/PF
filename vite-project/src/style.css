@@ -643,3 +643,190 @@ html {
   margin-bottom: 18px;
   background: #000;
 }
+
+
+
+
+
+/* ===== スマホ版 ===== */
+@media (max-width: 768px) {
+
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .hero {
+    height: 100svh;
+  }
+
+  .bg-video {
+    min-width: 100%;
+    min-height: 100%;
+    object-position: center center;
+  }
+
+  .overlay {
+    padding: 20px;
+  }
+
+  .sub-copy {
+    font-size: 0.75rem;
+    letter-spacing: 0.22em;
+  }
+
+  .overlay h1 {
+    font-size: clamp(2.4rem, 14vw, 4.2rem);
+  }
+
+  .main-copy {
+    font-size: 1rem;
+  }
+
+  .move-text {
+    left: 18px;
+    bottom: 22px;
+    font-size: 0.75rem;
+    padding: 7px 12px;
+  }
+
+  .content {
+    padding: 70px 20px 28px;
+  }
+
+  .content h2,
+  .good-items h2,
+  .outfit-section h2,
+  .movie-section h2 {
+    font-size: 1.75rem;
+  }
+
+  /* ===== スケジュール ===== */
+
+  .trip-summary {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    padding: 10px 20px 70px;
+  }
+
+  .trip-column {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .trip-map-center {
+    display: none;
+  }
+
+  .day-card {
+    width: 100%;
+    padding: 22px 20px;
+    border-radius: 18px;
+    box-sizing: border-box;
+  }
+
+  .day-card h3 {
+    font-size: 1.25rem;
+  }
+
+  .day-card li {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  /* ===== 共通セクション ===== */
+
+  .good-items,
+  .outfit-section,
+  .movie-section {
+    padding: 80px 20px;
+  }
+
+  .items-sub,
+  .outfit-sub,
+  .movie-sub {
+    margin-bottom: 38px;
+    line-height: 1.8;
+  }
+
+  /* ===== 持っていってよかった物 ===== */
+
+  .items-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .item-card {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    min-height: 0;
+
+    padding: 28px 22px;
+    box-sizing: border-box;
+  }
+
+  .item-card img {
+    width: 150px;
+    height: 165px;
+    object-fit: contain;
+  }
+
+  .item-card h3 {
+    min-height: auto;
+  }
+
+  /* ===== コーデ ===== */
+
+  .outfit-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .outfit-card {
+    padding: 26px 20px 30px;
+  }
+
+  .outfit-card img {
+    height: 430px;
+  }
+
+  /* ===== 動画 ===== */
+
+  .movie-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .movie-card {
+    padding: 18px;
+  }
+
+  /* ===== エンディング ===== */
+
+  .sunset-section {
+    height: 52vh;
+  }
+
+  .ending-message {
+    padding: 80px 22px 120px;
+  }
+
+  .ending-message p {
+    text-align: left;
+    line-height: 2.2;
+    font-size: 0.95rem;
+  }
+
+  .back-to-top {
+    right: 16px;
+    bottom: 16px;
+    padding: 10px 14px;
+    font-size: 0.75rem;
+  }
+}

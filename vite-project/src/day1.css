@@ -195,7 +195,6 @@
     min-height: 420px;
     padding: 18px 18px 22px;
     overflow: visible;
-    border-radius: 0;
     transform: rotate(-1.5deg);
     box-shadow:
     0 18px 40px rgba(0, 0, 0, 0.12),
@@ -738,5 +737,318 @@
   }
   
   
-  
-  
+
+
+
+
+/* =========================
+   DAY1 スマホ版
+========================= */
+@media (max-width: 768px) {
+  .day1-scrap {
+    padding: 24px 16px 80px;
+    letter-spacing: 0.04em;
+    overflow-x: hidden;
+  }
+
+  .day1-header {
+    display: block;
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .header-left {
+    align-items: center;
+  }
+
+  .title-art {
+    width: 220px;
+  }
+
+  .top-link {
+    top: -34px;
+    font-size: 13px;
+  }
+
+  .header-left .map-wrapper {
+    width: min(330px, 100%);
+    margin-top: -42px;
+  }
+
+  .header-left .marker-group {
+    transform: translate(-50%, -50%);
+  }
+
+  .marker-group.is-active {
+    transform: translate(-50%, -50%) scale(1.45);
+  }
+
+  .header-main {
+    min-height: auto;
+  }
+
+  .intro-area {
+    height: auto;
+    margin: 18px 0 24px;
+  }
+
+  .intro-kuina {
+    position: static;
+    width: 72px;
+    display: block;
+    margin: 0 auto -8px;
+  }
+
+  .speech-bubble {
+    position: static;
+    width: auto;
+    padding: 22px 20px;
+    font-size: 13px;
+    line-height: 1.8;
+    border-radius: 28px;
+  }
+
+  .day1-schedule {
+    margin: 0;
+    background: rgba(255, 255, 255, 0.45);
+    padding: 18px 18px 8px;
+    border-radius: 18px;
+  }
+
+  .day1-schedule a {
+    font-size: 14px;
+    margin-bottom: 10px;
+    line-height: 1.6;
+  }
+
+  .day1-scrap .outfit-card {
+    width: 90%;
+    height: auto;
+    min-height: 0;
+    margin: 28px auto 0;
+    padding: 18px 18px 22px;
+    transform: none;
+  }
+
+  .day1-scrap .outfit-card:hover {
+    transform: none;
+  }
+
+  .day1-scrap .outfit-card > img:not(.uv-parker) {
+    position: relative;
+    right: auto;
+    top: auto;
+    width: 100%;
+    max-width: 310px;
+    display: block;
+    margin: -6px auto 0;
+  }
+
+  .day1-scrap .uv-parker {
+    left: 18px;
+    top: 70px;
+    width: 150px;
+  }
+
+  .day1-scrap .outfit-card p {
+    position: relative;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    margin-top: 12px;
+    border-radius: 18px;
+    font-size: 13px;
+  }
+
+  .day1-timeline {
+    max-width: 100%;
+    margin-top: 34px;
+  }
+
+  .day1-timeline::before {
+    left: 10px;
+    width: 3px;
+  }
+
+  .memory-block {
+    display: block;
+    margin-bottom: 48px;
+    padding-left: 26px;
+  }
+
+  .memory-block::before {
+    left: 0;
+    width: 22px;
+    height: 22px;
+  }
+
+  .memory-block > .time {
+    margin-left: 14px;
+    margin-bottom: 12px;
+    font-size: 15px;
+  }
+
+  .memory-main {
+    padding-top: 14px;
+  }
+
+  .memory-main h2 {
+    margin: 0 0 14px;
+    font-size: 19px;
+    line-height: 1.5;
+  }
+
+  .memory-main p {
+    font-size: 14px;
+    line-height: 1.9;
+  }
+
+  .airport-memory-layout {
+    display: block;
+  }
+
+  .airport-memory .airport-photo {
+    width: 100%;
+    height: auto;
+    max-height: 260px;
+    object-fit: cover;
+  }
+
+  .airport-memory .airport-deco {
+    height: 120px;
+    margin-top: 10px;
+  }
+
+  .airport-memory .plane-art {
+    left: -20px;
+    top: -55px;
+    width: 210px;
+  }
+
+  .airport-memory .shirt-art {
+    left: 145px;
+    top: 22px;
+    width: 150px;
+  }
+
+  .yuiyui-layout,
+  .with-note {
+    padding-right: 0;
+    min-height: 0;
+  }
+
+  .yuiyui-photos,
+  .photos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .yuiyui-photos img,
+  .photos img:not(.swim-set),
+  .photo-landscape,
+  .photo-portrait {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+
+  .andagi-art {
+    position: static;
+    width: 150px;
+    display: block;
+    margin: 12px auto;
+  }
+
+  .turtle-card,
+  .view-card,
+  .wild-kuina-card {
+    position: relative;
+    right: auto;
+    top: auto;
+    width: 100%;
+    margin: 24px 0 0;
+    padding: 22px 18px;
+  }
+
+  .turtle-card img,
+  .view-card img,
+  .wild-kuina-photo,
+  .wild-photo-wrap {
+    width: 100%;
+    height: auto;
+  }
+
+  .view-card {
+    z-index: 1;
+  }
+
+  .view-card-item + .view-card-item {
+    margin-top: 18px;
+  }
+
+  .hedo-sign-deco {
+    position: static;
+    width: 90px;
+    display: block;
+    margin: 12px 0 0 auto;
+  }
+
+  .wild-kuina-card {
+    z-index: 1;
+  }
+
+  .eyes-art {
+    width: 38px;
+  }
+
+  .wild-photo-wrap {
+    max-width: 260px;
+  }
+
+  .attention-art {
+    left: 38%;
+    top: 45%;
+    width: 75px;
+  }
+
+  .single-img {
+    width: 100%;
+    height: auto;
+  }
+
+  .pool-photos {
+    padding-bottom: 90px;
+  }
+
+  .swim-set {
+    right: 0;
+    bottom: -5px;
+    width: 150px;
+  }
+
+  .day1-end {
+    height: 210px;
+  }
+
+  .honoka-cutout {
+    right: 10px;
+    width: 100px;
+  }
+
+  .back-top-link {
+    right: 150px;
+    bottom: 16px;
+    font-size: 13px;
+  }
+
+  .photos img:not(.swim-set):hover,
+  .airport-photo:hover,
+  .single-img:hover,
+  .wild-kuina-photo:hover,
+  .view-card img:hover,
+  .yuiyui-photos img:hover,
+  .turtle-card img:hover {
+    transform: none;
+  }
+}

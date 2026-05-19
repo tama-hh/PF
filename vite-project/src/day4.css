@@ -556,3 +556,265 @@
     font-weight: 700;
     text-decoration: none;
     }
+
+
+
+
+
+/* =========================
+   DAY4 スマホ版
+========================= */
+@media (max-width: 768px) {
+    .day4-scrap {
+      padding: 24px 16px 80px;
+      letter-spacing: 0.04em;
+      overflow-x: hidden;
+    }
+  
+    .day4-header {
+      display: block;
+      max-width: 100%;
+      margin-bottom: 30px;
+    }
+  
+    .header-left {
+      align-items: center;
+    }
+  
+    .title-art {
+      width: 220px;
+    }
+  
+    .top-link {
+      top: -34px;
+      font-size: 13px;
+    }
+  
+    .header-left .map-wrapper {
+      width: min(330px, 100%);
+      margin-top: -42px;
+    }
+  
+    .header-left .marker-group {
+      transform: translate(-50%, -50%);
+    }
+  
+    .marker-group.is-active {
+      transform: translate(-50%, -50%) scale(1.45);
+    }
+  
+    .header-main {
+      min-height: auto;
+    }
+  
+    .intro-area {
+      height: auto;
+      margin: 18px 0 24px;
+    }
+  
+    .intro-shisa {
+      position: static;
+      display: inline-block;
+      width: 84px !important;
+      margin: 0 8px -8px;
+    }
+  
+    .intro-area {
+      text-align: center;
+    }
+  
+    .speech-bubble {
+      position: static;
+      width: auto;
+      padding: 22px 20px;
+      font-size: 13px;
+      line-height: 1.8;
+      border-radius: 28px;
+    }
+  
+    .day4-schedule {
+      margin: 0;
+      background: rgba(255, 255, 255, 0.42);
+      padding: 18px 18px 8px;
+      border-radius: 18px;
+    }
+  
+    .day4-schedule a {
+      font-size: 14px;
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+  
+    .day4-scrap .outfit-card {
+      width: 90%;
+      height: auto;
+      min-height: 0;
+      margin: 28px auto 0;
+      padding: 18px 18px 22px;
+      transform: none;
+    }
+  
+    .day4-scrap .outfit-card:hover {
+      transform: none;
+    }
+  
+    .day4-scrap .outfit-card .outfit-girl {
+      position: relative;
+      right: auto;
+      top: auto;
+      width: 100%;
+      max-width: 300px;
+      display: block;
+      margin: -8px auto 0;
+    }
+  
+    .day4-scrap .outfit-card p {
+      position: relative;
+      left: auto;
+      right: auto;
+      bottom: auto;
+      margin-top: 12px;
+      font-size: 13px;
+    }
+  
+    .day4-timeline {
+      max-width: 100%;
+      margin-top: 34px;
+    }
+  
+    .day4-timeline::before {
+      left: 10px;
+      width: 3px;
+    }
+  
+    .memory-block {
+      display: block;
+      margin-bottom: 48px;
+      padding-left: 26px;
+    }
+  
+    .memory-block::before {
+      left: 0;
+      width: 22px;
+      height: 22px;
+    }
+  
+    .memory-block::after {
+      left: 26px;
+      top: 12px;
+    }
+  
+    .memory-block > .time {
+      margin-left: 14px;
+      margin-bottom: 12px;
+      font-size: 15px;
+    }
+  
+    .memory-main {
+      padding-top: 14px;
+    }
+  
+    .memory-main h2 {
+      margin: 0 0 14px;
+      font-size: 19px;
+      line-height: 1.5;
+    }
+  
+    .memory-main h3 {
+      margin: 24px 0 12px;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  
+    .memory-main p {
+      font-size: 14px;
+      line-height: 1.9;
+    }
+  
+    .photos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+  
+    .photos img,
+    .photo-landscape,
+    .photo-portrait {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+  
+    .alivila-memory,
+    .fruit-area,
+    .shisa-area,
+    .animals-area,
+    .finish-memory {
+      padding-right: 0;
+      min-height: 0;
+    }
+  
+    .swimset-deco {
+      position: static;
+      width: 155px;
+      display: block;
+      margin: 14px auto 0;
+    }
+  
+    .world-section {
+      margin-bottom: 34px;
+    }
+  
+    .gyokusendo-area {
+      padding: 16px 14px 20px;
+      border-radius: 12px;
+    }
+  
+    .animal-card {
+      position: relative;
+      left: auto;
+      top: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin: 24px 0 0;
+      gap: 10px;
+    }
+  
+    .animal-links {
+      width: 140px;
+      padding: 16px;
+      font-size: 12px;
+    }
+  
+    .animal-card .snake-deco {
+      width: 180px;
+    }
+  
+    .sanpincha-deco {
+      position: static;
+      width: 70px;
+      display: block;
+      margin: 20px 0 0 auto;
+    }
+  
+    .day4-end {
+      height: 160px;
+    }
+  
+    .back-top-link {
+      right: 130px;
+      bottom: 18px;
+      font-size: 13px;
+    }
+  
+    .day4-scrap .photos img:hover,
+    .shisa-card img:hover,
+    .swimset-deco:hover,
+    .intro-shisa:hover,
+    .animal-card .snake-deco:hover,
+    .sanpincha-deco:hover {
+      transform: none;
+    }
+  }

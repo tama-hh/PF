@@ -770,3 +770,317 @@ width: 14px;
     font-weight: 700;
     text-decoration: none;
 }
+
+
+
+
+/* =========================
+   DAY2 スマホ版
+========================= */
+@media (max-width: 768px) {
+    .day2-scrap {
+      padding: 24px 16px 80px;
+      letter-spacing: 0.04em;
+      overflow-x: hidden;
+    }
+  
+    .day2-header {
+      display: block;
+      max-width: 100%;
+      margin-bottom: 30px;
+    }
+  
+    .header-left {
+      align-items: center;
+    }
+  
+    .title-art {
+      width: 220px;
+    }
+  
+    .top-link {
+      top: -34px;
+      font-size: 13px;
+    }
+  
+    .header-left .map-wrapper {
+      width: min(330px, 100%);
+      margin-top: -42px;
+    }
+  
+    .header-left .marker-group {
+      transform: translate(-50%, -50%);
+    }
+  
+    .marker-group.is-active {
+      transform: translate(-50%, -50%) scale(1.45);
+    }
+  
+    .header-main {
+      min-height: auto;
+    }
+  
+    .intro-area {
+      height: auto;
+      margin: 18px 0 24px;
+    }
+  
+    .intro-dino {
+      position: static;
+      width: 120px;
+      display: block;
+      margin: 0 auto -8px;
+    }
+  
+    .speech-bubble {
+      position: static;
+      width: auto;
+      padding: 22px 20px;
+      font-size: 13px;
+      line-height: 1.8;
+      border-radius: 28px;
+    }
+  
+    .day2-schedule {
+      margin: 0;
+      background: rgba(255, 255, 255, 0.42);
+      padding: 18px 18px 8px;
+      border-radius: 18px;
+    }
+  
+    .day2-schedule a {
+      font-size: 14px;
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+  
+    .day2-scrap .outfit-card {
+      width: 90%;
+      height: auto;
+      min-height: 0;
+      margin: 28px auto 0;
+      padding: 18px 18px 22px;
+      transform: none;
+    }
+  
+    .day2-scrap .outfit-card:hover {
+      transform: none;
+    }
+  
+    .day2-scrap .outfit-card .outfit-girl {
+      position: relative;
+      right: auto;
+      top: auto;
+      width: 100%;
+      max-width: 300px;
+      display: block;
+      margin: -8px auto 0;
+    }
+  
+    .day2-scrap .outfit-card .umbrella-art {
+      left: 8px;
+      top: 76px;
+      width: 130px;
+    }
+  
+    .day2-scrap .outfit-card p {
+      position: relative;
+      left: auto;
+      right: auto;
+      bottom: auto;
+      margin-top: 12px;
+      font-size: 13px;
+    }
+  
+    .day2-timeline {
+      max-width: 100%;
+      margin-top: 34px;
+    }
+  
+    .day2-timeline::before {
+      left: 10px;
+      width: 3px;
+    }
+  
+    .memory-block {
+      display: block;
+      margin-bottom: 48px;
+      padding-left: 26px;
+    }
+  
+    .memory-block::before {
+      left: 0;
+      width: 22px;
+      height: 22px;
+    }
+  
+    .memory-block::after {
+      left: 26px;
+      top: 12px;
+    }
+  
+    .memory-block > .time {
+      margin-left: 14px;
+      margin-bottom: 12px;
+      font-size: 15px;
+    }
+  
+    .memory-main {
+      padding-top: 14px;
+    }
+  
+    .memory-main h2 {
+      margin: 0 0 14px;
+      font-size: 19px;
+      line-height: 1.5;
+    }
+  
+    .memory-main p {
+      font-size: 14px;
+      line-height: 1.9;
+    }
+  
+    .photos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+  
+    .photos img,
+    .photo-landscape,
+    .photo-portrait {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+  
+    .pool-morning,
+    .churaumi-memory,
+    .kishimoto-memory,
+    .pineapple-memory,
+    .aquasense-memory,
+    .orion-memory {
+      padding-right: 0;
+      min-height: 0;
+    }
+  
+    .swimset-morning,
+    .swimset-evening,
+    .orion-shirt-deco,
+    .starfish-deco {
+      position: static;
+      width: 160px;
+      display: block;
+      margin: 14px auto 0;
+    }
+  
+    .deco-fish {
+      position: static;
+      display: inline-block;
+      margin: 10px 6px 0;
+      pointer-events: auto;
+    }
+  
+    .soushihagi,
+    .hanatakasago,
+    .cuttlefish {
+      width: 95px;
+    }
+  
+    .manatee-card {
+      position: relative;
+      right: auto;
+      top: auto;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin: 24px 0 0;
+    }
+  
+    .manatee-links {
+      width: 170px;
+      padding: 16px 18px;
+      font-size: 12px;
+    }
+  
+    .manatee-card img {
+      width: 115px;
+    }
+  
+    .junglia-card {
+      position: relative;
+      right: auto;
+      top: auto;
+      width: 100%;
+      margin: 24px 0 0;
+      padding: 22px 18px;
+    }
+  
+    .junglia-card img {
+      width: 100%;
+      height: auto;
+      max-height: 220px;
+      object-fit: cover;
+    }
+  
+    .pinosaur-card {
+      position: relative;
+      right: auto;
+      top: auto;
+      width: 100%;
+      height: 330px;
+      margin-top: 18px;
+    }
+  
+    .pinosaur-logo {
+      left: 50%;
+      top: 80px;
+      width: 280px;
+      transform: translateX(-50%) rotate(-5deg);
+    }
+  
+    .pine-ptera {
+      left: 6px;
+      top: 70px;
+      width: 110px;
+    }
+  
+    .pine-spino {
+      left: 125px;
+      top: 10px;
+      width: 200px;
+    }
+  
+    .pinosaur-links {
+      left: 50%;
+      top: 245px;
+      transform: translateX(-50%);
+      width: 145px;
+      padding: 14px 16px;
+    }
+  
+    .day2-end {
+      height: 220px;
+    }
+  
+    .honoka-cutout {
+      right: 8px;
+      width: 90px;
+    }
+  
+    .back-top-link {
+      right: 145px;
+      bottom: 18px;
+      font-size: 13px;
+    }
+  
+    .day2-scrap .photos img:hover,
+    .day2-scrap .single-img:hover,
+    .day2-scrap video:hover,
+    .deco-fish:hover,
+    .pine-ptera:hover,
+    .pine-spino:hover,
+    .junglia-card:hover {
+      transform: none;
+    }
+  }

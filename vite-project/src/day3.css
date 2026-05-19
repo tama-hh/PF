@@ -772,3 +772,322 @@
     font-weight: 700;
     text-decoration: none;
     }
+
+
+
+
+
+/* =========================
+   DAY3 スマホ版
+========================= */
+@media (max-width: 768px) {
+    .day3-scrap {
+      padding: 24px 16px 80px;
+      letter-spacing: 0.04em;
+      overflow-x: hidden;
+    }
+  
+    .day3-header {
+      display: block;
+      max-width: 100%;
+      margin-bottom: 30px;
+    }
+  
+    .header-left {
+      align-items: center;
+    }
+  
+    .title-art {
+      width: 220px;
+    }
+  
+    .top-link {
+      top: -34px;
+      font-size: 13px;
+    }
+  
+    .header-left .map-wrapper {
+      width: min(330px, 100%);
+      margin-top: -42px;
+    }
+  
+    .header-left .marker-group {
+      transform: translate(-50%, -50%);
+    }
+  
+    .marker-group.is-active {
+      transform: translate(-50%, -50%) scale(1.45);
+    }
+  
+    .header-main {
+      min-height: auto;
+    }
+  
+    .intro-area {
+      height: auto;
+      margin: 18px 0 24px;
+    }
+  
+    .intro-cameraman {
+      position: static;
+      width: 120px;
+      display: block;
+      margin: 0 auto -8px;
+    }
+  
+    .speech-bubble {
+      position: static;
+      width: auto;
+      padding: 22px 20px;
+      font-size: 13px;
+      line-height: 1.8;
+      border-radius: 28px;
+    }
+  
+    .day3-schedule {
+      margin: 0;
+      background: rgba(255, 255, 255, 0.42);
+      padding: 18px 18px 8px;
+      border-radius: 18px;
+    }
+  
+    .day3-schedule a {
+      font-size: 14px;
+      margin-bottom: 10px;
+      line-height: 1.6;
+    }
+  
+    .day3-scrap .outfit-card {
+      width: 90%;
+      height: auto;
+      min-height: 0;
+      margin: 28px auto 0;
+      padding: 18px 18px 22px;
+      transform: none;
+    }
+  
+    .day3-scrap .outfit-card:hover {
+      transform: none;
+    }
+  
+    .day3-scrap .outfit-card .outfit-girl {
+      position: relative;
+      right: auto;
+      top: auto;
+      width: 100%;
+      max-width: 300px;
+      display: block;
+      margin: -8px auto 0;
+    }
+  
+    .day3-scrap .outfit-card p {
+      position: relative;
+      left: auto;
+      right: auto;
+      bottom: auto;
+      margin-top: 12px;
+      font-size: 13px;
+    }
+  
+    .day3-timeline {
+      max-width: 100%;
+      margin-top: 34px;
+    }
+  
+    .day3-timeline::before {
+      left: 10px;
+      width: 3px;
+    }
+  
+    .memory-block {
+      display: block;
+      margin-bottom: 48px;
+      padding-left: 26px;
+    }
+  
+    .memory-block::before {
+      left: 0;
+      width: 22px;
+      height: 22px;
+    }
+  
+    .memory-block::after {
+      left: 26px;
+      top: 12px;
+    }
+  
+    .memory-block > .time {
+      margin-left: 14px;
+      margin-bottom: 12px;
+      font-size: 15px;
+    }
+  
+    .memory-main {
+      padding-top: 14px;
+    }
+  
+    .memory-main h2 {
+      margin: 0 0 14px;
+      font-size: 19px;
+      line-height: 1.5;
+    }
+  
+    .memory-main p {
+      font-size: 14px;
+      line-height: 1.9;
+    }
+  
+    .photos {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+  
+    .photos img,
+    .photo-landscape,
+    .photo-portrait {
+      width: 100%;
+      height: 150px;
+      object-fit: cover;
+    }
+  
+    .sea-memory {
+      padding-right: 0;
+      min-height: 0;
+    }
+  
+    .swimset-deco {
+      position: static;
+      width: 160px;
+      display: block;
+      margin: 14px auto 0;
+    }
+  
+    .scrap-section {
+      max-width: 100%;
+      margin: 42px auto 58px;
+    }
+  
+    .tape-title {
+      display: block;
+      width: fit-content;
+      max-width: 86%;
+      margin: 0 auto 18px;
+      padding: 13px 24px 12px;
+      font-size: 22px;
+      line-height: 1.2;
+      text-align: center;
+      transform: rotate(-3deg);
+    }
+  
+    .american-tape,
+    .momenbaru-tape,
+    .offshot-tape {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 18px;
+      top: auto;
+    }
+  
+    .momenbaru-tape {
+      transform: rotate(3deg);
+    }
+  
+    .offshot-tape {
+      font-size: 22px;
+    }
+  
+    .collage,
+    .american-collage,
+    .momenbaru-collage,
+    .offshot-collage {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: none;
+      gap: 12px;
+      min-height: 0;
+      max-width: 100%;
+      margin: 0 auto;
+      padding-top: 0;
+    }
+  
+    .scrap-photo,
+    .av-kiss,
+    .av-angel,
+    .av-run,
+    .av-orange,
+    .av-stairs,
+    .av-hug,
+    .av-sunglasses,
+    .mb-sunset,
+    .mb-honoka,
+    .mb-forest,
+    .mb-walking,
+    .mb-big-ring,
+    .mb-selfie,
+    .mb-ring,
+    .mb-couple,
+    .off-car,
+    .off-store,
+    .off-walking,
+    .off-setting {
+      grid-area: auto;
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      top: auto;
+      left: auto;
+      transform: none;
+    }
+  
+    .av-angel,
+    .mb-forest,
+    .off-car {
+      grid-column: span 2;
+      height: auto;
+      max-height: 420px;
+      object-fit: contain;
+      background: rgba(255, 255, 255, 0.45);
+    }
+  
+    .memo-card {
+      width: auto;
+      margin: 24px 0 0;
+      padding: 20px 18px;
+      transform: none;
+    }
+  
+    .memo-card p {
+      font-size: 13px;
+      line-height: 1.9;
+    }
+
+    .day3-timeline::before {
+        bottom: 180px;
+      }
+    .fly-honoka-deco {
+      position: static;
+      width: 90px;
+      display: block;
+      margin: 150px 0 0 auto;
+    }
+  
+    .day3-end {
+      height: 120px;
+    }
+  
+    .back-top-link {
+      right: 90px;
+      bottom: 200px;
+      font-size: 13px;
+    }
+  
+    .day3-scrap .photos img:hover,
+    .day3-scrap .scrap-photo:hover,
+    .swimset-deco:hover,
+    .intro-cameraman:hover,
+    .tape-title:hover,
+    .fly-honoka-deco:hover {
+      transform: none;
+    }
+  }
